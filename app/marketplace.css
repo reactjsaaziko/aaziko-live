@@ -1,0 +1,197 @@
+/* ============================================================
+   MARKETPLACE — "Global trade, the Gen Z way" keynote
+   Ported from aaziko_marketplace.html. Every rule is scoped under
+   .mp-keynote so it cannot touch the shared nav/footer or the
+   animated .azflow "order-flow" section (which is deliberately kept
+   as-is and styled by globals.css). Loaded only on /marketplace,
+   exactly like home.css on /.
+   ============================================================ */
+
+.mp-keynote {
+  /* Extra tokens the keynote needs; the shared palette (--cream, --emerald,
+     --sage, --mint, --mint-soft, --saffron, --border, --ink, --body, --mute,
+     --cream2) is inherited from :root in globals.css and already matches. */
+  --emerald-deep: #143A2F;
+  --saffron-l: #E0983B;
+  --mp-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mp-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  background: var(--cream);
+  color: var(--body);
+  font-family: var(--sans);
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+}
+
+.mp-keynote h1,
+.mp-keynote h2 {
+  font-family: var(--mp-display);
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.04;
+}
+.mp-keynote em { font-style: normal; color: var(--emerald); }
+.mp-keynote .mute { color: var(--mute); }
+.mp-keynote section { position: relative; }
+
+.mp-keynote .eyebrow {
+  font-family: var(--mp-mono); font-size: .72rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--sage); font-weight: 500;
+  display: flex; align-items: center; gap: .7rem; margin-bottom: 1.6rem;
+}
+.mp-keynote .eyebrow.c { justify-content: center; }
+.mp-keynote .tri { display: inline-flex; gap: 2px; flex: none; }
+.mp-keynote .tri span { width: 4px; height: 15px; border-radius: 1px; display: block; }
+.mp-keynote .tri span:nth-child(1) { background: var(--saffron); }
+.mp-keynote .tri span:nth-child(2) { background: #fff; border: 1px solid var(--border); }
+.mp-keynote .tri span:nth-child(3) { background: var(--sage); }
+
+/* credentials bar under the shared nav */
+.mp-keynote .cred {
+  background: var(--emerald); color: var(--mint); font-family: var(--mp-mono);
+  font-size: .69rem; letter-spacing: .07em; text-align: center; padding: .5rem 1rem;
+  display: flex; gap: .4rem 1.4rem; justify-content: center; flex-wrap: wrap;
+}
+.mp-keynote .cred b { color: #fff; font-weight: 500; }
+
+.mp-keynote .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+
+/* full-viewport keynote beats */
+.mp-keynote .moment { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 5vh 0; }
+/* First screen (#close) fills the viewport exactly below the sticky nav + cred bar;
+   --mp-chrome is measured by the page script (nav + cred actual heights). */
+.mp-keynote #close.moment { min-height: calc(100vh - var(--mp-chrome, 96px)); min-height: calc(100svh - var(--mp-chrome, 96px)); }
+.mp-keynote .moment.tight { min-height: 62vh; }
+.mp-keynote .moment.dark { background: var(--emerald); color: var(--mint-soft); }
+.mp-keynote .moment.deep { background: var(--emerald-deep); color: var(--mint-soft); }
+.mp-keynote .big { font-family: var(--mp-display); font-weight: 700; letter-spacing: -.03em; line-height: 1.02; font-size: clamp(2.4rem, 7vw, 5.8rem); }
+.mp-keynote .mid { font-family: var(--mp-display); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; font-size: clamp(2rem, 5vw, 3.8rem); }
+.mp-keynote .huge { font-family: var(--mp-display); font-weight: 800; letter-spacing: -.03em; line-height: .92; font-size: clamp(4.5rem, 20vw, 15rem); }
+.mp-keynote .say { font-size: clamp(1.1rem, 1.6vw, 1.4rem); max-width: 56ch; color: inherit; }
+.mp-keynote .dark .say, .mp-keynote .deep .say { color: var(--mint-soft); }
+.mp-keynote .center { text-align: center; }
+.mp-keynote .flow-detail { padding: clamp(3rem, 6vw, 5rem) 0; }
+.mp-keynote .alt { background: var(--cream2); }
+
+/* staged line reveal (hero) — hidden only once JS confirms it is running */
+.mp-keynote.is-ready .stage-lines .ln { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+.mp-keynote.is-ready .stage-lines.play .ln { opacity: 1; transform: none; }
+.mp-keynote .stage-lines .ln.d1 { transition-delay: .15s; }
+.mp-keynote .stage-lines .ln.d2 { transition-delay: .75s; }
+.mp-keynote .stage-lines .ln.d3 { transition-delay: 1.5s; }
+.mp-keynote .stage-lines .ln.d4 { transition-delay: 2.15s; }
+
+.mp-keynote.is-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.mp-keynote.is-ready .reveal.vis { opacity: 1; transform: none; }
+
+/* hero search + flow chips */
+/* live marketplace box placement (the .lmkt card itself is styled in globals.css).
+   Wide (940px) so the 3×3 product grid spreads out instead of stacking tall;
+   flatter 16/10 thumbnails here keep the widened box from growing in height. */
+.mp-keynote .lmkt-hero { margin-top: 2.2rem; max-width: 940px; text-align: left; }
+.mp-keynote #lmkt .lmkt-img { aspect-ratio: 16 / 10; }
+.mp-keynote .searchbar { margin-top: 2.2rem; max-width: 540px; display: flex; align-items: center; gap: .7rem; background: #fff; border: 1.5px solid var(--emerald); border-radius: 12px; padding: 1rem 1.15rem; box-shadow: 0 14px 34px rgba(20,58,47,.1); }
+.mp-keynote .mp-q { flex: 1; min-width: 0; border: 0; background: transparent; font-family: var(--sans); font-size: 1rem; color: var(--ink); padding: 0; }
+.mp-keynote .mp-q::placeholder { color: var(--mute); opacity: 1; }
+.mp-keynote .mp-q::-webkit-search-cancel-button { -webkit-appearance: none; }
+/* no extra outline box on focus — the container's emerald border is the only frame */
+.mp-keynote .mp-q:focus, .mp-keynote .mp-q:focus-visible { outline: none; box-shadow: none; }
+.mp-keynote .flow3 { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1.1rem; }
+.mp-keynote .flow3 .p { font-family: var(--mp-mono); font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; color: var(--emerald); background: var(--mint-soft); border: 1px solid var(--mint); border-radius: 100px; padding: .4rem .85rem; }
+.mp-keynote .flow3 .arr { color: var(--sage); align-self: center; }
+.mp-keynote .scrollcue { margin-top: 2.6rem; font-family: var(--mp-mono); font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--mute); display: flex; align-items: center; gap: .6rem; }
+.mp-keynote .scrollcue .dn { animation: mpbob 1.6s ease-in-out infinite; }
+@keyframes mpbob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* seven walls rising */
+.mp-keynote .walls { max-width: 760px; margin: 2.4rem auto 0; display: grid; gap: .6rem; }
+.mp-keynote .wall { display: flex; gap: 1rem; align-items: center; background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--saffron); border-radius: 10px; padding: 1rem 1.25rem; box-shadow: 0 8px 20px rgba(20,58,47,.05); }
+.mp-keynote .wall .n { font-family: var(--mp-mono); font-weight: 600; color: var(--saffron); font-size: 1rem; flex: none; }
+.mp-keynote .wall b { color: var(--ink); font-weight: 700; }
+.mp-keynote .wall .t { font-size: .98rem; }
+.mp-keynote.is-ready .wseq .wall { opacity: 0; transform: translateY(16px); }
+.mp-keynote.is-ready .wseq.vis .wall { opacity: 1; transform: none; transition: opacity .55s ease, transform .55s ease; }
+.mp-keynote .wseq.vis .wall:nth-child(1) { transition-delay: .05s; }
+.mp-keynote .wseq.vis .wall:nth-child(2) { transition-delay: .18s; }
+.mp-keynote .wseq.vis .wall:nth-child(3) { transition-delay: .31s; }
+.mp-keynote .wseq.vis .wall:nth-child(4) { transition-delay: .44s; }
+.mp-keynote .wseq.vis .wall:nth-child(5) { transition-delay: .57s; }
+.mp-keynote .wseq.vis .wall:nth-child(6) { transition-delay: .7s; }
+.mp-keynote .wseq.vis .wall:nth-child(7) { transition-delay: .83s; }
+
+/* the demo — product page assembling */
+.mp-keynote .demo-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; margin-top: .5rem; }
+.mp-keynote .stage { perspective: 1600px; }
+.mp-keynote .mock { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; box-shadow: 0 34px 64px rgba(20,58,47,.17); transform: rotateY(-8deg) rotateX(3deg); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.mp-keynote .stage:hover .mock { transform: rotateY(0) rotateX(0); }
+.mp-keynote .mock-badges { display: flex; gap: .4rem; margin-bottom: .9rem; flex-wrap: wrap; }
+.mp-keynote .mock-badges span { font-family: var(--mp-mono); font-size: .6rem; letter-spacing: .05em; text-transform: uppercase; color: var(--emerald); background: var(--mint-soft); border-radius: 5px; padding: .25rem .5rem; }
+.mp-keynote .mock-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1rem; }
+.mp-keynote .mock-img { background: linear-gradient(135deg, #EAF3EE, #D6E9DE); border-radius: 10px; aspect-ratio: 1/1; display: grid; place-items: center; color: var(--sage); font-family: var(--mp-mono); font-size: .64rem; letter-spacing: .08em; text-align: center; position: relative; overflow: hidden; }
+.mp-keynote .mock-img::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.6), transparent 55%); pointer-events: none; }
+/* live product photo dropped in by productSpotlight (marketplace.script.js) */
+.mp-keynote .mock-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mp-keynote .mock-thumbs { display: flex; gap: .35rem; margin-top: .5rem; }
+.mp-keynote .mock-thumbs i { height: 26px; border-radius: 5px; background: #EAF3EE; flex: 1; background-size: cover; background-position: center; }
+.mp-keynote .mock-thumbs i.has { cursor: pointer; }
+.mp-keynote .mock-thumbs i.is-on { outline: 2px solid var(--emerald); outline-offset: 1px; }
+.mp-keynote .mock-title { font-family: var(--mp-display); font-weight: 600; font-size: 1.05rem; color: var(--ink); line-height: 1.3; }
+.mp-keynote .mock-sup { display: flex; align-items: center; gap: .4rem; margin: .5rem 0 .8rem; font-size: .78rem; flex-wrap: wrap; }
+.mp-keynote .mock-sup .gold { background: var(--saffron); color: #fff; font-family: var(--mp-mono); font-size: .58rem; letter-spacing: .05em; padding: .16rem .4rem; border-radius: 4px; }
+.mp-keynote .mock-sup .vf { color: var(--emerald); font-weight: 700; }
+.mp-keynote .tiers { display: flex; gap: .4rem; margin-bottom: .4rem; flex-wrap: wrap; }
+.mp-keynote .tier { border: 1px solid var(--border); border-radius: 7px; padding: .4rem .55rem; flex: 1; min-width: 72px; }
+.mp-keynote .tier .q { font-family: var(--mp-mono); font-size: .56rem; color: var(--mute); text-transform: uppercase; }
+.mp-keynote .tier .pr { font-family: var(--mp-mono); font-weight: 600; color: var(--ink); font-size: .88rem; }
+.mp-keynote .tier.best { border-color: var(--emerald); background: var(--mint-soft); }
+.mp-keynote .tier.best .pr { color: var(--emerald); }
+.mp-keynote .mrow { display: flex; align-items: center; gap: .5rem; padding: .5rem 0; border-top: 1px dashed var(--border); font-size: .8rem; }
+.mp-keynote .mrow .lab { font-family: var(--mp-mono); font-size: .58rem; letter-spacing: .05em; text-transform: uppercase; color: #fff; background: var(--emerald); padding: .18rem .42rem; border-radius: 4px; flex: none; }
+.mp-keynote .mrow .lab.s { background: var(--saffron); }
+.mp-keynote .mrow .v b { color: var(--ink); }
+.mp-keynote .modlist .ml-h { font-family: var(--mp-mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1rem; }
+.mp-keynote .modlist .row { display: flex; gap: .7rem; align-items: flex-start; padding: .55rem 0; border-bottom: 1px solid var(--border); font-size: .92rem; }
+.mp-keynote .modlist .row .d { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); margin-top: .5rem; flex: none; }
+.mp-keynote .modlist .row b { color: var(--ink); font-weight: 700; }
+/* assembling reveal */
+.mp-keynote.is-ready .asm { opacity: 0; transform: translateY(12px); }
+.mp-keynote.is-ready .play .asm { opacity: 1; transform: none; transition: opacity .55s ease, transform .55s ease; }
+
+/* under the hood */
+.mp-keynote .hood { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.4rem; }
+.mp-keynote .hc { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.mp-keynote .hc h3 { font-family: var(--mp-display); font-weight: 600; font-size: 1.1rem; color: var(--ink); margin-bottom: .5rem; }
+.mp-keynote .hc p { font-size: .92rem; }
+.mp-keynote .hc strong { color: var(--emerald); font-weight: 700; }
+
+/* three things */
+.mp-keynote .three { display: flex; gap: clamp(1rem, 4vw, 3rem); flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+.mp-keynote .three .t { font-family: var(--mp-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.6rem); color: var(--ink); }
+.mp-keynote .three .t span { color: var(--sage); font-weight: 600; }
+
+/* finale */
+.mp-keynote .finale { font-family: var(--mp-display); font-weight: 800; color: #fff; font-size: clamp(2rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -.02em; }
+.mp-keynote .finale em { color: var(--saffron-l); }
+.mp-keynote .hindi { font-family: var(--sans); display: block; font-size: .34em; color: var(--mint); font-weight: 500; margin-top: 1rem; letter-spacing: .02em; }
+
+.mp-keynote :focus-visible { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 2px; }
+
+@media (max-width: 900px) {
+  .mp-keynote .demo-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 760px) {
+  .mp-keynote .hood { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .mp-keynote .mock-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mp-keynote * { animation: none !important; transition: none !important; }
+  .mp-keynote.is-ready .reveal,
+  .mp-keynote.is-ready .stage-lines .ln,
+  .mp-keynote.is-ready .wseq .wall,
+  .mp-keynote.is-ready .asm { opacity: 1 !important; transform: none !important; }
+  .mp-keynote .mock { transform: none !important; }
+  .mp-keynote .moment { min-height: auto; padding: 3.5rem 0; }
+}

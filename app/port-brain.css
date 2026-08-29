@@ -1,0 +1,216 @@
+/* ============================================================
+   PORT BRAIN — "The world's demand, read for India" keynote
+   Ported from aaziko_portbrain.html. Every rule is scoped under
+   .pb-keynote so it cannot touch the shared nav/footer or the
+   preserved interactive live-demo box (#pb-stage), which keeps the
+   site design system from globals.css. Loaded only on /port-brain.
+   ============================================================ */
+
+.pb-keynote {
+  --emerald-deep: #143A2F;
+  --saffron-l: #E0983B;
+  --pb-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pb-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  background: var(--cream);
+  color: var(--body);
+  font-family: var(--sans);
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+}
+
+.pb-keynote h1,
+.pb-keynote h2 { font-family: var(--pb-display); color: var(--ink); font-weight: 700; letter-spacing: -.025em; line-height: 1.04; }
+.pb-keynote em { font-style: normal; color: var(--emerald); }
+.pb-keynote section { position: relative; }
+
+.pb-keynote .eyebrow { font-family: var(--pb-mono); font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); font-weight: 500; display: flex; align-items: center; gap: .7rem; margin-bottom: 1.6rem; }
+.pb-keynote .eyebrow.c { justify-content: center; }
+.pb-keynote .tri { display: inline-flex; gap: 2px; flex: none; }
+.pb-keynote .tri span { width: 4px; height: 15px; border-radius: 1px; display: block; }
+.pb-keynote .tri span:nth-child(1) { background: var(--saffron); }
+.pb-keynote .tri span:nth-child(2) { background: #fff; border: 1px solid var(--border); }
+.pb-keynote .tri span:nth-child(3) { background: var(--sage); }
+
+/* credentials bar under the shared nav */
+.pb-keynote .cred { background: var(--emerald); color: var(--mint); font-family: var(--pb-mono); font-size: .69rem; letter-spacing: .07em; text-align: center; padding: .5rem 1rem; display: flex; gap: .4rem 1.4rem; justify-content: center; flex-wrap: wrap; }
+.pb-keynote .cred b { color: #fff; font-weight: 500; }
+
+.pb-keynote .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+
+/* full-viewport keynote beats */
+.pb-keynote .moment { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 5vh 0; }
+.pb-keynote .moment.tight { min-height: 60vh; }
+.pb-keynote .moment.dark { background: var(--emerald); color: var(--mint-soft); }
+.pb-keynote .moment.deep { background: var(--emerald-deep); color: var(--mint-soft); }
+.pb-keynote .big { font-family: var(--pb-display); font-weight: 700; letter-spacing: -.03em; line-height: 1.02; font-size: clamp(2.3rem, 6.6vw, 5.4rem); }
+.pb-keynote .mid { font-family: var(--pb-display); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; font-size: clamp(1.9rem, 5vw, 3.6rem); }
+.pb-keynote .say { font-size: clamp(1.08rem, 1.55vw, 1.38rem); max-width: 58ch; color: inherit; }
+.pb-keynote .dark .say, .pb-keynote .deep .say { color: var(--mint-soft); }
+.pb-keynote .center { text-align: center; }
+.pb-keynote .flow-detail { padding: clamp(3rem, 6vw, 5rem) 0; }
+.pb-keynote .alt { background: var(--cream2); }
+
+/* staged reveals — hidden only once JS confirms it is running (no-JS shows everything) */
+.pb-keynote.is-ready .stage-lines .ln { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+.pb-keynote.is-ready .stage-lines.play .ln { opacity: 1; transform: none; }
+.pb-keynote .stage-lines .ln.d1 { transition-delay: .15s; }
+.pb-keynote .stage-lines .ln.d2 { transition-delay: .8s; }
+.pb-keynote .stage-lines .ln.d3 { transition-delay: 1.6s; }
+.pb-keynote .stage-lines .ln.d4 { transition-delay: 2.3s; }
+.pb-keynote.is-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.pb-keynote.is-ready .reveal.vis { opacity: 1; transform: none; }
+
+/* hero stat + scan panel */
+.pb-keynote .stat { margin-top: 1.8rem; font-family: var(--pb-mono); font-size: .82rem; letter-spacing: .04em; color: var(--emerald); display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; }
+.pb-keynote .stat b { color: var(--ink); font-weight: 600; }
+.pb-keynote .stat .live { display: inline-flex; align-items: center; gap: .4rem; color: var(--saffron); }
+.pb-keynote .stat .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--saffron); display: inline-block; animation: pbpulse 1.6s ease-in-out infinite; }
+@keyframes pbpulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+.pb-keynote .scanpanel { margin-top: 2rem; max-width: 620px; background: var(--emerald-deep); border-radius: 14px; padding: 1.1rem 1.2rem; position: relative; overflow: hidden; box-shadow: 0 20px 44px rgba(20,58,47,.2); }
+.pb-keynote .scanpanel .ttl { font-family: var(--pb-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mint); margin-bottom: .7rem; display: flex; justify-content: space-between; }
+.pb-keynote .rec { font-family: var(--pb-mono); font-size: .72rem; color: #9DBBAC; padding: .32rem 0; border-bottom: 1px solid rgba(200,230,213,.1); display: flex; justify-content: space-between; gap: 1rem; }
+.pb-keynote .rec.hit { color: #fff; }
+.pb-keynote .rec .h { color: var(--saffron-l); font-weight: 600; }
+.pb-keynote .scanline { position: absolute; left: 0; right: 0; height: 44px; background: linear-gradient(180deg, transparent, rgba(200,230,213,.12), transparent); top: 0; animation: pbscan 3.4s ease-in-out infinite; }
+@keyframes pbscan { 0% { top: -44px; } 100% { top: 100%; } }
+
+/* scale numbers */
+.pb-keynote .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.6rem; }
+.pb-keynote .nc { border-top: 2px solid var(--emerald); padding-top: 1rem; }
+.pb-keynote .nc .v { font-family: var(--pb-display); font-weight: 700; color: var(--emerald); font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1; letter-spacing: -.02em; }
+.pb-keynote .nc .l { font-size: .9rem; color: var(--body); margin-top: .6rem; }
+
+/* dossier demo (LIVE buyer-intelligence card + six-answers list) */
+.pb-keynote .demo-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; margin-top: .5rem; }
+.pb-keynote .stage { perspective: 1600px; }
+.pb-keynote .dossier { background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 34px 64px rgba(20,58,47,.17); transform: rotateY(-7deg) rotateX(2deg); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.7,.2,1); overflow: hidden; }
+.pb-keynote .stage:hover .dossier { transform: rotateY(0) rotateX(0); }
+.pb-keynote .dh { background: var(--emerald-deep); color: #fff; padding: .9rem 1.2rem; display: flex; justify-content: space-between; align-items: center; }
+.pb-keynote .dh .k { font-family: var(--pb-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mint); }
+.pb-keynote .dh .live { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--pb-mono); font-size: .6rem; color: var(--saffron-l); }
+.pb-keynote .dh .live i { width: 7px; height: 7px; border-radius: 50%; background: var(--saffron-l); animation: pbpulse 1.6s ease-in-out infinite; }
+.pb-keynote .db { padding: 1.1rem 1.2rem; transition: opacity .22s ease; }
+.pb-keynote .db.pb-swap { opacity: 0; }
+.pb-keynote .buyer { font-family: var(--pb-display); font-weight: 600; font-size: 1.1rem; color: var(--ink); margin-bottom: .2rem; display: flex; align-items: center; flex-wrap: wrap; gap: .3rem .45rem; }
+.pb-keynote .dchip { display: inline-flex; align-items: center; font-family: var(--pb-mono); font-size: .55rem; font-weight: 600; letter-spacing: .03em; padding: .12rem .5rem; border-radius: 100px; border: 1px solid; }
+.pb-keynote .buyer-sub { font-family: var(--pb-mono); font-size: .66rem; color: var(--mute); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .9rem; }
+.pb-keynote .irow { display: flex; gap: .7rem; align-items: flex-start; padding: .5rem 0; border-top: 1px dashed var(--border); font-size: .86rem; }
+.pb-keynote .irow .lab { font-family: var(--pb-mono); font-size: .58rem; letter-spacing: .05em; text-transform: uppercase; color: var(--sage); flex: none; width: 74px; padding-top: .15rem; }
+.pb-keynote .irow .v { color: var(--body); }
+.pb-keynote .irow .v b { color: var(--ink); font-weight: 700; }
+.pb-keynote .irow .v .risk { color: var(--saffron); font-weight: 600; }
+.pb-keynote .pitch { margin-top: .9rem; background: var(--mint-soft); border: 1px solid var(--mint); border-radius: 10px; padding: .9rem 1rem; }
+.pb-keynote .pitch .pl { font-family: var(--pb-mono); font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); margin-bottom: .35rem; }
+.pb-keynote .pitch .pv { font-size: .9rem; color: var(--ink); }
+.pb-keynote .pitch .pv b { color: var(--emerald); }
+.pb-keynote .pitch .match { font-family: var(--pb-mono); font-size: .62rem; color: var(--sage); margin-top: .4rem; }
+.pb-keynote .connect { margin-top: .9rem; background: var(--emerald); color: #fff; text-align: center; font-family: var(--pb-display); font-weight: 600; font-size: .9rem; padding: .75rem; border-radius: 9px; }
+
+/* ===== LIVE FEED widget — full-width buyer-intelligence panel (India's export trade flow) ===== */
+.pb-keynote .pbfeed { background: #FDFBF6; border: 1px solid var(--border); border-radius: 20px; padding: clamp(1.1rem, 2.4vw, 1.9rem); box-shadow: 0 30px 60px rgba(20,58,47,.10); }
+.pb-keynote .pbfeed__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; margin-bottom: 1.1rem; border-bottom: 1px solid var(--border); }
+.pb-keynote .pbfeed__live { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--pb-mono); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--emerald); font-weight: 500; }
+.pb-keynote .pbfeed__live i { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 4px rgba(90,138,110,.18); animation: pbpulse 1.6s ease-in-out infinite; }
+.pb-keynote .pbfeed__rec { font-family: var(--pb-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+.pb-keynote .pbfeed__rec b { color: var(--ink); font-weight: 600; }
+
+/* search + country row */
+.pb-keynote .pbfeed__search { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) auto; gap: .9rem; align-items: end; background: var(--mint-soft); border: 1px solid var(--mint); border-radius: 14px; padding: 1rem clamp(.9rem, 2vw, 1.2rem); }
+.pb-keynote .pbfeed__flabel { display: block; font-family: var(--pb-mono); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sage); font-weight: 500; margin-bottom: .4rem; }
+.pb-keynote .pbfeed__inputwrap { position: relative; display: flex; align-items: center; gap: .55rem; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: .6rem .8rem; }
+.pb-keynote .pbfeed__inputwrap:focus-within { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(30,91,71,.10); }
+.pb-keynote .pbfeed__ico { flex: none; font-size: .85rem; opacity: .7; }
+.pb-keynote .pbfeed__in, .pb-keynote .pbfeed__country { flex: 1; min-width: 0; border: 0; background: transparent; font-family: var(--sans); font-size: .9rem; color: var(--ink); padding: 0; }
+.pb-keynote .pbfeed__in::placeholder { color: var(--mute); opacity: 1; }
+.pb-keynote .pbfeed__country::placeholder { color: var(--body); opacity: 1; }
+.pb-keynote .pbfeed__in:focus, .pb-keynote .pbfeed__country:focus { outline: none; box-shadow: none; }
+.pb-keynote .pbfeed__in::-webkit-search-cancel-button, .pb-keynote .pbfeed__country::-webkit-search-cancel-button { -webkit-appearance: none; }
+.pb-keynote .pbfeed__country { color: var(--body); }
+.pb-keynote .pbfeed__countrymenu { position: absolute; z-index: 30; top: calc(100% + 6px); left: 0; right: 0; max-height: 230px; overflow-y: auto; overscroll-behavior: contain; padding: .35rem; background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 14px 30px rgba(20,58,47,.16); }
+.pb-keynote .pbfeed__countrymenu[hidden] { display: none; }
+.pb-keynote .pbfeed__countryoption { display: block; width: 100%; border: 0; border-radius: 7px; background: transparent; color: var(--ink); font-family: var(--sans); font-size: .84rem; line-height: 1.25; text-align: left; padding: .55rem .65rem; cursor: pointer; }
+.pb-keynote .pbfeed__countryoption:hover, .pb-keynote .pbfeed__countryoption.is-active { background: var(--mint-soft); color: var(--emerald-deep); }
+.pb-keynote .pbfeed__countryempty { color: var(--mute); font-size: .8rem; padding: .65rem; }
+.pb-keynote .pbfeed__go { align-self: end; border: 0; background: var(--emerald); color: #fff; font-family: var(--pb-display); font-weight: 600; font-size: .86rem; padding: .75rem 1.3rem; border-radius: 10px; cursor: pointer; white-space: nowrap; transition: background .18s ease; }
+.pb-keynote .pbfeed__go:hover { background: var(--emerald-deep); }
+
+/* stat cards */
+.pb-keynote .pbfeed__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; margin-top: 1.1rem; }
+.pb-keynote .pbstat { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: .85rem .95rem; }
+.pb-keynote .pbstat__row { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.pb-keynote .pbstat__label { font-family: var(--pb-mono); font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.pb-keynote .pbstat__ico { font-size: .95rem; opacity: .85; }
+.pb-keynote .pbstat__val { font-family: var(--pb-display); font-weight: 700; font-size: clamp(1.15rem, 2.2vw, 1.6rem); color: var(--ink); letter-spacing: -.02em; margin-top: .35rem; line-height: 1; }
+
+/* list header */
+.pb-keynote .pbfeed__listhead { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.3rem 0 .6rem; }
+.pb-keynote .pbfeed__matching { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--pb-display); font-weight: 600; font-size: .95rem; color: var(--ink); }
+.pb-keynote .pbfeed__matching i { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); animation: pbpulse 1.6s ease-in-out infinite; }
+.pb-keynote .pbfeed__pill { font-family: var(--pb-mono); font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; color: var(--sage); border: 1px solid var(--border); border-radius: 100px; padding: .25rem .7rem; background: #fff; }
+
+/* buyer cards */
+.pb-keynote .pb-list__note { font-size: .88rem; color: var(--mute); padding: 1.2rem .2rem; }
+.pb-keynote .pbcard { display: flex; align-items: center; gap: .9rem; background: #fff; border: 1px solid var(--border); border-radius: 13px; padding: .85rem 1rem; margin-top: .6rem; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+.pb-keynote .pbcard:first-child { margin-top: 0; }
+.pb-keynote .pbcard:hover { border-color: var(--mint); box-shadow: 0 10px 24px rgba(20,58,47,.08); transform: translateY(-1px); }
+.pb-keynote .pbcard__avatar { flex: none; width: 42px; height: 42px; border-radius: 11px; background: var(--mint-soft); border: 1px solid var(--mint); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; }
+.pb-keynote .pbcard__main { flex: 1; min-width: 0; }
+.pb-keynote .pbcard__top { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem .5rem; }
+.pb-keynote .pbcard__name { font-family: var(--pb-display); font-weight: 600; font-size: .98rem; color: var(--ink); }
+.pb-keynote .pbchip { display: inline-flex; align-items: center; gap: .2rem; font-family: var(--pb-mono); font-size: .56rem; font-weight: 600; letter-spacing: .03em; padding: .16rem .5rem; border-radius: 100px; border: 1px solid; white-space: nowrap; }
+.pb-keynote .pbchip--grow { color: var(--sage); background: rgba(90,138,110,.08); border-color: rgba(90,138,110,.28); }
+.pb-keynote .pbcard__meta { font-size: .8rem; color: var(--body); margin-top: .28rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pb-keynote .pbcard__codes { display: flex; flex-wrap: wrap; gap: .3rem .55rem; margin-top: .3rem; }
+.pb-keynote .pbcard__hs { font-family: var(--pb-mono); font-size: .64rem; color: #2563EB; }
+.pb-keynote .pbcard__ring { flex: none; position: relative; width: 46px; height: 46px; }
+.pb-keynote .pbcard__ring svg { width: 46px; height: 46px; display: block; }
+.pb-keynote .pbring__bg { fill: none; stroke: #E8E1D3; stroke-width: 3.5; }
+.pb-keynote .pbring__fg { fill: none; stroke: #2563EB; stroke-width: 3.5; stroke-linecap: round; transition: stroke-dashoffset .7s cubic-bezier(.2,.7,.2,1); }
+.pb-keynote .pbcard__ringnum { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--pb-display); font-weight: 700; font-size: .82rem; color: var(--ink); }
+.pb-keynote .pb-list__foot { font-family: var(--pb-mono); font-size: .64rem; color: var(--sage); margin-top: .9rem; letter-spacing: .03em; }
+
+@media (max-width: 720px) {
+  .pb-keynote .pbfeed__search { grid-template-columns: 1fr; }
+  .pb-keynote .pbfeed__go { align-self: stretch; }
+  .pb-keynote .pbfeed__stats { grid-template-columns: 1fr 1fr; }
+}
+
+/* openings */
+.pb-keynote .opens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.3rem; }
+.pb-keynote .oc { background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--saffron); border-radius: 12px; padding: 1.5rem; }
+.pb-keynote .oc h3 { font-family: var(--pb-display); font-weight: 600; font-size: 1.15rem; color: var(--ink); margin-bottom: .5rem; }
+.pb-keynote .oc p { font-size: .92rem; }
+
+/* finale */
+.pb-keynote .finale { font-family: var(--pb-display); font-weight: 800; color: #fff; font-size: clamp(2rem, 6vw, 4.4rem); line-height: 1.05; letter-spacing: -.02em; }
+.pb-keynote .finale em { color: var(--saffron-l); }
+.pb-keynote .finale.sub { font-size: clamp(1.4rem, 3.5vw, 2.3rem); color: var(--mint); margin-top: 1.8rem; font-weight: 700; }
+.pb-keynote .hindi { font-family: var(--sans); display: block; font-size: .4em; color: var(--mint); font-weight: 500; margin-top: .9rem; }
+
+.pb-keynote :focus-visible { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 2px; }
+
+/* six-answers band — sits full-width beneath the live feed widget. pbd-namespaced, loads only
+   on /port-brain. */
+.pbd-answers { margin-top: clamp(1.6rem, 3vw, 2.4rem); }
+.pbd-answers__h { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1rem; }
+.pbd-answers__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 clamp(1.2rem, 3vw, 2.6rem); }
+.pbd-answers__row { display: flex; gap: .7rem; align-items: flex-start; padding: .6rem 0; border-bottom: 1px solid var(--border); font-size: .94rem; color: var(--body); line-height: 1.5; }
+.pbd-answers__row b { color: var(--ink); font-weight: 700; }
+.pbd-answers__n { font-family: 'IBM Plex Mono', ui-monospace, monospace; color: var(--emerald); font-weight: 600; flex: none; }
+.pbd-answers__foot { margin-top: 1.1rem; font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 600; color: var(--emerald); font-size: 1.05rem; line-height: 1.3; }
+@media (max-width: 820px) { .pbd-answers__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .pbd-answers__grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 820px) { .pb-keynote .nums { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .pb-keynote .opens { grid-template-columns: 1fr; } }
+@media (max-width: 460px) { .pb-keynote .nums { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .pb-keynote * { animation: none !important; transition: none !important; }
+  .pb-keynote.is-ready .reveal,
+  .pb-keynote.is-ready .stage-lines .ln,
+  .pb-keynote.is-ready .asm { opacity: 1 !important; transform: none !important; }
+  .pb-keynote .dossier { transform: none !important; }
+  .pb-keynote .moment { min-height: auto; padding: 3.5rem 0; }
+  .pb-keynote .scanline { display: none; }
+}

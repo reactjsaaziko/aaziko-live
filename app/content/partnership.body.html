@@ -1,0 +1,180 @@
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="Aaziko">
+      <img src="/aaziko-logo.png" alt="Aaziko" class="nav__logo" />
+    </a>
+    <div class="nav__links" style="gap:18px;">
+      <a href="/">Home</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/product-analysis/">Analysis</a>
+      <a href="/port-brain/">Port Brain</a>
+      <a href="/logistics/">Logistics</a>
+      <a href="/customs/">Customs</a>
+      <a href="/trade-agreements/">FTAs</a>
+      <a href="/inspection/">Inspection</a>
+      <a href="/finance/">Finance</a>
+      <a href="/order-assurance/">Assurance</a>
+      <a href="/vision/">Vision 2030</a>
+      <a href="mailto:ceo@aaziko.com" class="nav__cta">ceo@aaziko.com</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <a href="/" class="module-hero__back">← BACK TO OVERVIEW</a>
+    <span class="module-hero__num">FOR GOVERNMENT</span>
+    <h1 class="module-hero__title">Three ways forward, starting this quarter.</h1>
+    <p class="module-hero__sub">For the Department of Commerce, DGFT, Ministry of MSME, DPIIT, Export Promotion Councils and State industry departments. Each track can begin within 30 days.</p>
+  </div>
+</header>
+
+<section class="partnership" id="tracks" style="padding-top:60px;">
+  <div class="container">
+    <div class="partnership-tracks">
+      <div class="track">
+        <span class="track__tag">Track 01 · Government</span>
+        <div class="track__title">Co-build India's digital export rail.</div>
+        <p class="track__copy">A formal partnership where Aaziko becomes public-private digital infrastructure for India's export ambition — the execution layer for the Export Promotion Mission, FTA utilization and Districts as Export Hubs.</p>
+        <ul class="track__list">
+          <li>MoU with DGFT / MSME ministry</li>
+          <li>Integration with EPM, TRACE, CGSE delivery</li>
+          <li>Quarterly export-intelligence dashboards for policy teams</li>
+          <li>Public-private operating framework</li>
+        </ul>
+        <a href="mailto:ceo@aaziko.com?subject=Government%20Partnership%20Track" class="track__cta">Book strategic meeting →</a>
+      </div>
+
+      <div class="track">
+        <span class="track__tag">Track 02 · Pilot</span>
+        <div class="track__title">Start with one state, one cluster.</div>
+        <p class="track__copy">For state governments, DICs and chambers of commerce. A focused 90-day pilot — one ODOP cluster, one buyer country, measurable export GMV. Proof on the ground before scale.</p>
+        <ul class="track__list">
+          <li>One cluster (e.g. Morbi ceramics, Tiruppur knitwear)</li>
+          <li>One buyer country (e.g. UAE, UK, Australia)</li>
+          <li>90-day measurable GMV target</li>
+          <li>Post-pilot scale-up plan</li>
+        </ul>
+        <a href="mailto:contact@aaziko.com?subject=Pilot%20Program%20Inquiry" class="track__cta">Propose a pilot →</a>
+      </div>
+
+      <div class="track">
+        <span class="track__tag">Track 03 · Demonstration</span>
+        <div class="track__title">See the live platform in action.</div>
+        <p class="track__copy">For senior officials, EPC leadership and policy advisors who want to evaluate Aaziko hands-on before any commitment. A 45-minute walkthrough of the live platform, with real maker and buyer data from your jurisdiction.</p>
+        <ul class="track__list">
+          <li>45-min live platform walkthrough</li>
+          <li>Real data from your state or sector</li>
+          <li>No commitment, no PowerPoint</li>
+          <li>Virtual or at your office</li>
+        </ul>
+        <a href="mailto:ceo@aaziko.com?subject=Request%20Live%20Demonstration" class="track__cta">Book a demonstration →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LIVE PLATFORM TELEMETRY ============== -->
+<section class="live-platform" id="live">
+  <div class="container">
+    <span class="kicker">Live Platform Access</span>
+    <h2 class="h2">Not a concept. <em>A live trade system.</em></h2>
+    <p class="lede" style="margin-top:18px;">
+      The platform runs on real infrastructure today. Below is a continuous read-out of platform activity. Senior officials can request credentials to use the live system directly.
+    </p>
+
+    <div class="live-monitor">
+      <div class="live-monitor__head">
+        <div><span class="live-dot"></span>LIVE · AAZIKO PLATFORM ACTIVITY</div>
+        <div id="live-timestamp">Updated just now</div>
+      </div>
+      <div class="live-monitor__grid">
+        <div class="live-stat">
+          <div class="live-stat__num" id="live-matches">247</div>
+          <div class="live-stat__label">Buyer–maker matches identified · today</div>
+          <span class="live-stat__delta">▲ +18% vs yesterday</span>
+        </div>
+        <div class="live-stat">
+          <div class="live-stat__num" id="live-orders">56</div>
+          <div class="live-stat__label">Orders initiated through the platform · today</div>
+          <span class="live-stat__delta">▲ +22% vs yesterday</span>
+        </div>
+        <div class="live-stat">
+          <div class="live-stat__num" id="live-value" data-prefix="$" data-suffix=" M" data-decimal="1">$1.4 M</div>
+          <div class="live-stat__label">Trade value facilitated · today</div>
+          <span class="live-stat__delta">▲ +14% vs yesterday</span>
+        </div>
+        <div class="live-stat">
+          <div class="live-stat__num" id="live-shipments">312</div>
+          <div class="live-stat__label">Shipments cleared customs · today</div>
+          <span class="live-stat__delta">▲ +9% vs yesterday</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="api-hook">
+      <span class="api-hook__label">⚙ Developer integration point</span>
+      The live monitor runs on representative data by default. To wire it to production telemetry, set <code>window.AAZIKO_API.livePulse</code> to the platform's live endpoint (e.g. <code>https://api.aaziko.com/v1/pulse/live</code>) returning JSON counters: <code>matches_today</code>, <code>orders_today</code>, <code>trade_value_usd_today</code>, <code>shipments_cleared_today</code>. Polling, error fallback and graceful degradation are handled by the page.
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section class="section">
+  <div class="container">
+    <span class="kicker">Direct Contact</span>
+    <h2 class="h2">One email <em>starts it.</em></h2>
+
+    <div class="contact-strip" style="margin-top:36px;">
+      <div class="contact-col">
+        <div class="contact-col__title">Aaziko Global LLP</div>
+        <p>
+          405, 4th Floor<br/>
+          Avalon The Commercial Hub<br/>
+          Katargam, Surat 395004<br/>
+          Gujarat, India
+        </p>
+        <div class="contact-badges">
+          <span>DPIIT-RECOGNISED</span>
+          <span>LLPIN ACA-5985</span>
+          <span>IEC ACBFA6538N</span>
+          <span>DIPP139260</span>
+        </div>
+      </div>
+      <div class="contact-col">
+        <div class="contact-col__title">Direct Lines</div>
+        <p>
+          <a href="mailto:ceo@aaziko.com">ceo@aaziko.com</a><br/>
+          <a href="mailto:contact@aaziko.com">contact@aaziko.com</a><br/>
+          <br/>
+          +91 99042 24477<br/>
+          +91 98251 35034<br/>
+          <span style="color:var(--mute);font-size:13px;">Sagar Sheliya, Founder &amp; CEO</span>
+        </p>
+      </div>
+      <div class="contact-col">
+        <div class="contact-col__title">Strategic Partnerships</div>
+        <p>
+          <strong style="color:var(--ink);">MoUs signed:</strong><br/>
+          SGCCI (Surat Chamber)<br/>
+          VCCI (Vadodara Chamber)<br/>
+          <br/>
+          <strong style="color:var(--ink);">In conversation:</strong><br/>
+          DGFT · MSME Ministry · DPIIT · State Industries Departments
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand-row">
+      <img src="/aaziko-logo.png" alt="Aaziko" class="footer__logo" />
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Aaziko Global LLP · Surat, India · DPIIT-recognised</div>
+      <div>From Make in India to Buy from India.</div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,125 @@
+/* ============================================================
+   AAZIKO CUSTOMS — "aaziko_customs" redesign, ported into Next.
+   Every rule from the reference page's <style> is preserved but
+   SCOPED under #azc-customs so it cannot leak into the shared
+   design system used by the other routes (globals.css).
+   The reference's STATIC Custom 3.0 demo box (.c3-*) is replaced
+   by the live #cu3 box — its styles live inline with its markup
+   in content/customs.body.html.
+   ============================================================ */
+
+#azc-customs {
+  --cream: #FBF7F0; --cream2: #F5EFE2; --emerald: #1E5B47; --emerald-deep: #143A2F;
+  --sage: #5A8A6E; --mint: #C8E6D5; --mint-soft: #E4F1EA; --saffron: #C4751F; --saffron-l: #E0983B;
+  --border: #E8E1D3; --ink: #111418; --body: #2C2C2C; --mute: #8A857B; --amber: #D8A93C;
+  --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --deva: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+
+  background: var(--cream); color: var(--body); font-family: var(--sans);
+  line-height: 1.7; font-size: clamp(1rem, 1.05vw, 1.1rem);
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+#azc-customs * { box-sizing: border-box; margin: 0; padding: 0; }
+#azc-customs .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+#azc-customs h1, #azc-customs h2 { font-family: var(--display); color: var(--ink); font-weight: 700; letter-spacing: -.025em; line-height: 1.04; }
+#azc-customs em { font-style: normal; color: var(--emerald); }
+#azc-customs .eyebrow { font-family: var(--mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sage); font-weight: 500; display: flex; align-items: center; gap: .7rem; margin-bottom: 1.4rem; }
+#azc-customs .eyebrow.c { justify-content: center; }
+#azc-customs .tri { display: inline-flex; gap: 2px; flex: none; }
+#azc-customs .tri span { width: 4px; height: 15px; border-radius: 1px; display: block; }
+#azc-customs .tri span:nth-child(1) { background: var(--saffron); }
+#azc-customs .tri span:nth-child(2) { background: #fff; border: 1px solid var(--border); }
+#azc-customs .tri span:nth-child(3) { background: var(--sage); }
+
+/* credibility bar (the nav is the shared site header, styled in globals.css) */
+#azc-customs .cred { background: var(--emerald); color: var(--mint); font-family: var(--mono); font-size: .69rem; letter-spacing: .07em; text-align: center; padding: .5rem 1rem; display: flex; gap: .4rem 1.4rem; justify-content: center; flex-wrap: wrap; }
+#azc-customs .cred b { color: #fff; font-weight: 500; }
+
+/* moments / sections */
+#azc-customs .moment { min-height: 86vh; display: flex; flex-direction: column; justify-content: center; padding: 5vh 0; }
+#azc-customs .moment.tight { min-height: 58vh; }
+/* First screen: fill the viewport exactly, minus the sticky nav + credibility bar.
+   --azc-chrome is measured by the page script (nav + cred actual heights). */
+#azc-customs .moment.screen1 { min-height: calc(100vh - var(--azc-chrome, 96px)); min-height: calc(100svh - var(--azc-chrome, 96px)); }
+#azc-customs .moment.dark { background: var(--emerald); color: var(--mint-soft); }
+#azc-customs .moment.deep { background: var(--emerald-deep); color: var(--mint-soft); }
+#azc-customs .big { font-family: var(--display); font-weight: 700; letter-spacing: -.03em; line-height: 1.02; font-size: clamp(2.3rem, 6.4vw, 5.2rem); color: var(--ink); }
+#azc-customs .mid { font-family: var(--display); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; font-size: clamp(1.9rem, 5vw, 3.5rem); color: var(--ink); }
+#azc-customs .say { font-size: clamp(1.05rem, 1.5vw, 1.34rem); max-width: 60ch; color: inherit; }
+#azc-customs .dark .say, #azc-customs .deep .say { color: var(--mint-soft); }
+#azc-customs .center { text-align: center; }
+#azc-customs .flow-detail { padding: clamp(3rem, 6vw, 5rem) 0; }
+#azc-customs .alt { background: var(--cream2); }
+
+/* staged hero lines + reveal-on-scroll */
+#azc-customs .stage-lines .ln { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+#azc-customs .stage-lines.play .ln { opacity: 1; transform: none; }
+#azc-customs .stage-lines .ln.d1 { transition-delay: .15s; }
+#azc-customs .stage-lines .ln.d2 { transition-delay: .8s; }
+#azc-customs .stage-lines .ln.d3 { transition-delay: 1.6s; }
+#azc-customs .stage-lines .ln.d4 { transition-delay: 2.3s; }
+#azc-customs.js-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+#azc-customs.js-ready .reveal.vis { opacity: 1; transform: none; }
+
+/* scenario (with / without Custom 3.0 timelines) */
+#azc-customs .scenario { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 2.2rem; }
+@media (max-width: 760px) { #azc-customs .scenario { grid-template-columns: 1fr; } }
+#azc-customs .tl { border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; background: #fff; }
+#azc-customs .tl.old { border-top: 3px solid var(--saffron); }
+#azc-customs .tl.new { border-top: 3px solid var(--emerald); background: var(--mint-soft); }
+#azc-customs .tl-h { font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 600; }
+#azc-customs .tl.old .tl-h { color: var(--saffron); }
+#azc-customs .tl.new .tl-h { color: var(--emerald); }
+#azc-customs .ti { display: flex; gap: .8rem; padding: .55rem 0; border-bottom: 1px dashed var(--border); font-size: .92rem; align-items: flex-start; }
+#azc-customs .ti:last-child { border-bottom: 0; }
+#azc-customs .ti .tt { font-family: var(--mono); font-size: .64rem; color: var(--mute); flex: none; width: 52px; padding-top: .2rem; }
+#azc-customs .ti b { color: var(--ink); font-weight: 700; }
+#azc-customs .ti.dead { color: var(--saffron); }
+#azc-customs .ti.dead b { color: var(--saffron); }
+#azc-customs .ti.win { color: var(--emerald); }
+#azc-customs .ti.win b { color: var(--emerald); }
+#azc-customs .statline { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+@media (max-width: 640px) { #azc-customs .statline { grid-template-columns: 1fr; } }
+#azc-customs .st { background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--saffron); border-radius: 10px; padding: 1.2rem 1.3rem; }
+#azc-customs .st .v { font-family: var(--display); font-weight: 700; color: var(--saffron); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1; }
+#azc-customs .st .l { font-size: .9rem; margin-top: .5rem; }
+
+/* the shift numbers */
+#azc-customs .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.4rem; }
+@media (max-width: 820px) { #azc-customs .nums { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { #azc-customs .nums { grid-template-columns: 1fr; } }
+#azc-customs .nc { border-top: 2px solid var(--emerald); padding-top: 1rem; }
+#azc-customs .nc .v { font-family: var(--display); font-weight: 700; color: var(--emerald); font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1; letter-spacing: -.02em; }
+#azc-customs .nc .l { font-size: .9rem; color: var(--body); margin-top: .6rem; }
+
+/* three things */
+#azc-customs .three3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.3rem; }
+@media (max-width: 760px) { #azc-customs .three3 { grid-template-columns: 1fr; } }
+#azc-customs .t3 { background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--emerald); border-radius: 12px; padding: 1.6rem; }
+#azc-customs .t3 .n { font-family: var(--mono); color: var(--saffron); font-weight: 600; font-size: .9rem; margin-bottom: .4rem; }
+#azc-customs .t3 h3 { font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: var(--ink); margin-bottom: .5rem; }
+#azc-customs .t3 p { font-size: .93rem; }
+
+/* finale */
+#azc-customs .finale { font-family: var(--display); font-weight: 800; color: #fff; font-size: clamp(2rem, 6vw, 4.4rem); line-height: 1.05; letter-spacing: -.02em; }
+#azc-customs .finale em { color: var(--saffron-l); }
+#azc-customs .finale.sub { font-size: clamp(1.4rem, 3.5vw, 2.3rem); color: var(--mint); margin-top: 1.8rem; font-weight: 700; }
+#azc-customs .hindi { font-family: var(--deva); display: block; font-size: .4em; color: var(--mint); font-weight: 500; margin-top: .9rem; }
+
+/* footer */
+#azc-customs footer { background: var(--emerald-deep); color: var(--mint); padding: 2.6rem 0; }
+#azc-customs .foot-in { display: flex; flex-wrap: wrap; gap: 1.2rem 2.4rem; justify-content: space-between; align-items: center; }
+#azc-customs .foot-brand { font-family: var(--display); font-weight: 700; font-size: 1.35rem; color: #fff; display: flex; align-items: center; gap: .55rem; }
+#azc-customs .foot-logo { height: 40px; width: auto; display: block; }
+#azc-customs .foot-meta { font-family: var(--mono); font-size: .72rem; letter-spacing: .05em; color: var(--mint); line-height: 1.9; text-align: right; }
+#azc-customs .foot-meta a { color: #fff; text-decoration: none; }
+@media (max-width: 640px) { #azc-customs .foot-meta { text-align: left; } }
+
+#azc-customs :focus-visible { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  #azc-customs * { animation: none !important; transition: none !important; }
+  #azc-customs.js-ready .reveal, #azc-customs .stage-lines .ln { opacity: 1 !important; transform: none !important; }
+  #azc-customs .moment { min-height: auto; padding: 3.5rem 0; }
+}

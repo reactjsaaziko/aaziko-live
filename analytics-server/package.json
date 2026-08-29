@@ -1,0 +1,16 @@
+{
+  "name": "aaziko-live-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "First-party, cookieless analytics collector + dashboard for the Aaziko Live site (aaziko.com/live).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "geoip-lite": "^1.4.10",
+    "nodemailer": "^6.9.16"
+  }
+}

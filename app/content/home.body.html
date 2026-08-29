@@ -1,0 +1,316 @@
+<!-- Shared site header — kept outside #azf-home so the page's scoped nav CSS can't restyle it. -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="Aaziko">
+      <img src="/aaziko-logo.png" alt="Aaziko" class="nav__logo" />
+    </a>
+    <div class="nav__links" style="gap:18px;">
+      <a href="/">Home</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/product-analysis/">Analysis</a>
+      <a href="/port-brain/">Port Brain</a>
+      <a href="/logistics/">Logistics</a>
+      <a href="/customs/">Customs</a>
+      <a href="/trade-agreements/">FTAs</a>
+      <a href="/inspection/">Inspection</a>
+      <a href="/finance/">Finance</a>
+      <a href="/order-assurance/">Assurance</a>
+      <a href="/vision/">Vision 2030</a>
+      <a href="/partnership/" class="nav__cta">Government engagement</a>
+    </div>
+  </div>
+</nav>
+
+<div id="azf-home">
+
+<div class="cred">
+  <span><b>DPIIT-Recognised</b></span><span>LLPIN <b>ACA-5985</b></span><span>IEC <b>ACBFA6538N</b></span><span>MoUs signed — <b>SGCCI · VCCI</b></span>
+</div>
+
+<!-- 1 · HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow reveal">A National Opportunity</div>
+      <h1>
+        <span class="line"><span>India has 7 crore MSMEs.</span></span>
+        <span class="line"><span><em>Only 2 in 1,000 have</em></span></span>
+        <span class="line"><span><em>ever sold to the world.</em></span></span>
+      </h1>
+      <p class="sub reveal">7.83 crore MSMEs. 99.8% have never sold to a single foreign buyer — not because the product isn't good enough, but because reaching the world is too hard.</p>
+      <div class="stamp reveal">That 99.8% is India's single largest untapped export engine.</div>
+      <div class="chips reveal">
+        <span class="label">Built to serve</span>
+        <span class="chip">$2 Trillion Export Vision</span>
+        <span class="chip">Export Promotion Mission</span>
+        <span class="chip">Districts as Export Hubs</span>
+        <span class="chip">Atmanirbhar Bharat</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="india-map-wrap">
+        <svg id="india-map" viewBox="0 0 400 440" role="img" aria-label="Map of India — every district a maker, lighting up as it connects to global buyers"></svg>
+        <div class="map-caption" id="map-caption">EACH DOT ≈ 10 LAKH MSMEs · LIT DOTS = EXPORTING TODAY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · SCALE -->
+<section class="alt" id="scale">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">The Scale</div>
+      <h2>This is not a proposal. It's live infrastructure — at national scale.</h2>
+      <p class="lead">Aaziko didn't write a plan. It built the platform. Every number here is running today.</p>
+    </div>
+    <div class="drow reveal"><div class="num"><span class="val count" data-target="6.4" data-decimals="1">6.4</span><span class="unit">crore+</span></div><div class="body"><div class="cap">Port Brain · 178 countries</div>It reads the world's real trade — who is buying, what, and from where — and finds India's opening: the buyer over-reliant on a single supplier who needs to <strong>diversify</strong>, the buyer hunting a <strong>better price</strong>, the buyer who wants a <strong>reliable, certified manufacturer</strong>. Aaziko sees it in their trade history and points them to the Indian product that fits.</div></div>
+    <div class="drow reveal"><div class="num"><span class="val count" data-target="30" data-decimals="0">30</span><span class="unit">crore+</span></div><div class="body"><div class="cap">Market intelligence · 203 countries</div>Every rule of the trade — <strong>customs regulations</strong> by country, the <strong>trade agreement and tariff</strong> that applies to each import, and what <strong>consumers and importers</strong> in each market actually want.</div></div>
+    <div class="drow reveal"><div class="num"><span class="val count" data-target="3.3" data-decimals="1">3.3</span><span class="unit">lakh+</span></div><div class="body"><div class="cap">Indian manufacturers · 64 lakh+ products</div>Any Indian manufacturer can bring their company and full catalogue onto Aaziko in <strong>one click</strong> — and start selling to the world.</div></div>
+    <div class="drow reveal"><div class="num"><span class="val count" data-target="26" data-decimals="0">26</span><span class="pre">+</span></div><div class="body"><div class="cap">Buyer countries · met in person</div>Aaziko has <strong>visited and met these buyers directly</strong> — and they are sourcing on the platform today. Real relationships, real orders.</div></div>
+    <div class="drow reveal"><div class="num"><span class="val count" data-target="195" data-decimals="0">195</span></div><div class="body"><div class="cap">Countries</div>The number the compliance engine is built for — architected for the whole world, not one corridor.</div></div>
+    <p class="closer reveal">One platform. National scale. <em>Already trading.</em></p>
+  </div>
+</section>
+
+<!-- 3 · BUYER IN GERMANY -->
+<section id="demo">
+  <div class="wrap">
+    <div class="eyebrow reveal">How a buyer buys from India</div>
+    <h2 class="reveal">A buyer in Germany. <em>Watch what happens.</em></h2>
+    <p class="lead reveal" style="margin-top:1.1rem">No agents, no trade fair, no week of emails. One search — and the platform does what an entire export office used to do.</p>
+    <div class="journey">
+      <div class="jleft">
+        <!-- LIVE marketplace search — real products pulled from the Aaziko platform
+             (Port Brain dossier-styled card; logic in content/_livemarket.js, styles in globals.css).
+             Deliberately NOT .reveal: live boxes must never be gated behind scroll animation. -->
+        <div class="lmkt" id="lmkt" aria-label="Live Aaziko marketplace search">
+          <div class="lmkt-dh"><span class="k">Product Search · Aaziko Marketplace</span><span class="live"><i></i>LIVE READ</span></div>
+          <div class="lmkt-db">
+            <form class="lmkt-search" id="lmkt-form" role="search" autocomplete="off">
+              <span class="lmkt-search__ico" aria-hidden="true">&#128269;</span>
+              <input id="lmkt-input" class="lmkt-search__in" type="search" value="tshirt" placeholder="Search 64 lakh+ Indian products…" aria-label="Search live Aaziko products" autocomplete="off" />
+              <button type="submit" class="lmkt-search__go">Search →</button>
+            </form>
+            <div class="lmkt-grid" id="lmkt-grid"></div>
+            <div class="lmkt-foot" id="lmkt-foot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="steps reveal">
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Finds the manufacturer</b> — 14 Morbi makers matched, with capacity and certifications.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Calculates the tariff</b> — India–EU FTA preference applied automatically.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Checks compliance</b> — CE marking and EU import rules verified for this exact product.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Books logistics</b> — Morbi → Mundra → Hamburg, one landed-cost quote.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Generates documents</b> — invoice, packing list, certificate of origin, B/L.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Arranges payment</b> — escrow protection for the buyer, assured payment for the maker.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Tracks the shipment</b> — factory floor to Hamburg warehouse, with live production evidence.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · NINE CAPABILITIES -->
+<section class="alt center" id="capabilities">
+  <div class="wrap">
+    <div class="reveal" style="max-width:64ch;margin:0 auto">
+      <div class="eyebrow" style="justify-content:center">One platform · Nine national capabilities</div>
+      <h2>From first search <em>to assured delivery.</em></h2>
+      <p class="lead" style="margin:1.1rem auto 0">Nine capabilities, one continuous flow. The Indian manufacturer only manufactures — the platform does everything else.</p>
+    </div>
+    <div class="caps reveal">
+      <a class="cap-card" href="/marketplace/"><span class="cn">01</span><div class="cico">🔍</div><div class="cv">Discover</div><div class="cm">Marketplace</div></a>
+      <a class="cap-card" href="/product-analysis/"><span class="cn">02</span><div class="cico">📊</div><div class="cv">Analyze</div><div class="cm">Product Fit</div></a>
+      <a class="cap-card" href="/port-brain/"><span class="cn">03</span><div class="cico">🧠</div><div class="cv">Match</div><div class="cm">Port Brain</div></a>
+      <a class="cap-card" href="/logistics/"><span class="cn">04</span><div class="cico">🚢</div><div class="cv">Price</div><div class="cm">Logistics</div></a>
+      <a class="cap-card" href="/customs/"><span class="cn">05</span><div class="cico">🛃</div><div class="cv">Comply</div><div class="cm">Customs 3.0</div></a>
+      <a class="cap-card" href="/trade-agreements/"><span class="cn">06</span><div class="cico">🤝</div><div class="cv">Save</div><div class="cm">FTA Engine</div></a>
+      <a class="cap-card" href="/inspection/"><span class="cn">07</span><div class="cico">📷</div><div class="cv">Inspect</div><div class="cm">QC &amp; Evidence</div></a>
+      <a class="cap-card" href="/finance/"><span class="cn">08</span><div class="cico">💰</div><div class="cv">Finance</div><div class="cm">Export Credit</div></a>
+      <a class="cap-card" href="/order-assurance/"><span class="cn">09</span><div class="cico">🛡️</div><div class="cv">Assure</div><div class="cm">100% Assurance</div></a>
+    </div>
+    <a href="#demo" class="caps-cta">Explore the capabilities live →</a>
+  </div>
+</section>
+
+<!-- 5 · EIGHT HANDS -->
+<section id="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Why India needs a new export system</div>
+      <h2>Eight hands touch every export. <em>Seven add cost, not value.</em></h2>
+      <p class="lead">The path between an Indian manufacturer and a global buyer was designed in another century. Every layer adds days, margin and opacity — and prices the smallest makers out first.</p>
+    </div>
+    <div class="compare">
+      <div class="cbox reveal">
+        <div class="cbox-head"><b>Current trade</b><span class="t">7–30 days</span></div>
+        <div class="node">Manufacturer</div><div class="link">↓ margin + days</div>
+        <div class="node">Trader</div><div class="link">↓ margin + days</div>
+        <div class="node">Exporter</div><div class="link">↓ margin + days</div>
+        <div class="node">Freight forwarder</div><div class="link">↓ margin + days</div>
+        <div class="node">Customs agent</div><div class="link">↓ margin + days</div>
+        <div class="node">Importer</div><div class="link">↓ margin + days</div>
+        <div class="node">Distributor</div><div class="link">↓ margin + days</div>
+        <div class="node">Buyer</div>
+      </div>
+      <div class="cbox aaz reveal">
+        <div class="cbox-head"><b>Aaziko trade network</b><span class="t">Minutes</span></div>
+        <div class="node">Manufacturer</div><div class="link">↓</div>
+        <div class="aaz-node"><div class="n">AAZIKO</div><div class="sub">discovery · price · duty · compliance · inspection · finance · logistics · assurance</div></div>
+        <div class="link">↓</div><div class="node">Buyer</div>
+        <p class="caption">The maker keeps the margin the layers used to take. The buyer gets the speed and transparency they get nowhere else.</p>
+      </div>
+    </div>
+    <div class="stats3 reveal">
+      <div class="stat-card"><div class="sv">90%</div><div class="sl">faster — complete quotes in minutes, not weeks</div></div>
+      <div class="stat-card"><div class="sv">60%</div><div class="sl">lower trade-execution cost, factory gate to buyer warehouse</div></div>
+      <div class="stat-card"><div class="sv">100%</div><div class="sl">transparent — every rupee, duty and document visible to both sides</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 6 · PLATFORM STATEMENT -->
+<section class="statement">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Platform</div>
+    <h2 class="reveal">Aaziko is India's Trade Execution Platform. <em>It takes down both walls.</em></h2>
+    <p class="lead reveal">A global buyer purchases from <strong>any</strong> Indian manufacturer, at the <strong>manufacturer's price</strong>, with the ease of ordering on <em>Amazon</em> — search a product, place the order, and never once wonder <em>is this supplier genuine?</em>, never worry about logistics, never fear the goods arrive wrong. No trading house. No hidden markup. The maker only manufactures — the platform does everything else.</p>
+  </div>
+</section>
+
+<!-- 7 · ONBOARDING -->
+<section class="alt" id="onboard">
+  <div class="wrap">
+    <div class="eyebrow reveal">How we onboard 7 crore</div>
+    <h2 class="reveal">And here's how every maker gets on the platform.</h2>
+    <p class="lead reveal" style="margin-top:1.1rem">Aaziko brings India's 7 crore MSMEs onto the platform two ways.</p>
+    <div class="duo">
+      <div class="card reveal"><h3><span class="step-n">1</span>The 2 crore+ already online</h3><p>Any MSME with a digital footprint — a website, a listing, a catalogue anywhere online — Aaziko's AI reads it, builds their company profile and product catalogue automatically, and with <strong>one click of confirmation</strong> they go live: seen by the world, ready to receive orders. No forms. No effort. India already has <strong>more than 2 crore</strong> MSMEs like this.</p></div>
+      <div class="card reveal"><h3><span class="step-n">2</span>The rest, still offline</h3><p>For makers with no digital presence, we go to them — through the <strong>Chambers of Commerce, industry Associations, knowledge-sharing events, and ODOP</strong>. With the <strong>MSME Department on board, we activate whole clusters at once.</strong></p></div>
+    </div>
+    <p class="quote reveal">"You want Korea? This is what Korea buys. This weave. This finish. This label. This pack."</p>
+    <p class="lead reveal">The maker just perfects the product. Aaziko does the rest — and <strong style="color:var(--emerald)">pays them on delivery.</strong> That is how a cottage unit in an Indian village starts making for a buyer in Seoul.</p>
+    <div class="engines reveal"><span><b>Government</b> opens the markets</span><span class="dot">·</span><span><b>Export Promotion Councils</b> carry the knowledge</span><span class="dot">·</span><span><b>Manufacturers</b> modify for the world</span><span class="dot">·</span><span><b>Aaziko</b> executes the trade</span></div>
+  </div>
+</section>
+
+<!-- 8 · THE $2T MATH — verbatim port of aaziko-live-final.html #2t -->
+<section id="impact" class="ates2t">
+  <div class="wrap center">
+    <p class="eyebrow rv">The national payoff</p>
+    <h2 class="rv">Open 20% of India's sellers to the world.<br>The $2 trillion target becomes real.</h2>
+    <p class="lede rv">India's exports hit a record <strong>US$863.1 billion</strong> in FY 2025-26 — but merchandise grew just 0.93%. The gap to $2 trillion is closed in goods, by sellers not selling abroad today. Move the sliders.</p>
+  </div>
+
+  <div class="wrap narrow">
+    <div class="model rv">
+      <div class="model-head">Set your own assumptions — the arithmetic follows</div>
+      <div class="model-body">
+        <div class="ctrl">
+          <label for="mRate"><span>Share of India's 7.83 cr MSMEs opened to the world</span><output id="mRateOut">20%</output></label>
+          <input type="range" id="mRate" min="1" max="30" value="20" step="1">
+          <div class="ends"><span>1%</span><span>30%</span></div>
+        </div>
+        <div class="ctrl">
+          <label for="mVal"><span>Average yearly sales per activated seller</span><output id="mValOut">₹50 lakh</output></label>
+          <input type="range" id="mVal" min="10" max="500" value="50" step="10">
+          <div class="ends"><span>₹10 lakh</span><span>₹5 crore</span></div>
+        </div>
+        <div class="outs" aria-live="polite">
+          <div class="out2"><b id="mExp">1.57 crore</b><span>Active sellers</span></div>
+          <div class="out2"><b id="mAdd">$890 B</b><span>Added sales/yr</span></div>
+          <div class="out2"><b id="mTot">$1.75 T</b><span>Total sales</span></div>
+          <div class="out2"><b id="mGap">78%</b><span>Of the $2T gap closed</span></div>
+        </div>
+        <div class="gapwrap">
+          <div class="gaplab"><span>$863 B today</span><span>$2 T target</span></div>
+          <div class="gapbar" role="img" aria-label="Share of the gap to two trillion dollars closed"><div class="gapfill" id="mFill"></div></div>
+        </div>
+        <p class="assume">Baseline US$863.1 B (FY 2025-26) · target US$2 T · MSME base 7.83 crore · ₹88 = US$1. A projection from your two inputs, not a forecast.</p>
+      </div>
+    </div>
+    <p class="lede center rv" style="margin:2.2rem auto 0"><strong>The factories are already standing. The markets are already open. Aaziko connects the two.</strong></p>
+  </div>
+</section>
+
+<!-- 9 · POLICY FOUNDATION -->
+<section id="policy">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">The Policy Foundation</div>
+      <h2>The Government has built the rails. <em>One layer is missing.</em></h2>
+      <p class="lead">Make in India built the capacity. The FTAs opened the doors. The Export Promotion Mission funded the journey. What no policy can do by itself is put a paying global buyer in front of every Indian maker. That is an infrastructure problem — and it is solved.</p>
+    </div>
+    <div class="policy">
+      <div class="gov-card reveal">
+        <h3>Government infrastructure — built ✓</h3>
+        <div class="gov-item"><span class="g">✓</span> Make in India — manufacturing capacity</div>
+        <div class="gov-item"><span class="g">✓</span> Districts as Export Hubs · ODOP — 1,243 products, 775 districts</div>
+        <div class="gov-item"><span class="g">✓</span> Export Promotion Mission — ₹25,060 Cr (FY26–31)</div>
+        <div class="gov-item"><span class="g">✓</span> 15 FTAs covering 27+ countries — UAE, Australia, EFTA, UK, Oman…</div>
+        <div class="gov-item"><span class="g">✓</span> BharatTradeNet — digital trade documents</div>
+        <div class="gov-item"><span class="g">✓</span> Trade Connect ePlatform · NIRYAT — trade intelligence</div>
+        <div class="gov-item"><span class="g">✓</span> CGSE ₹20,000 Cr · ECGC · Niryat Protsahan — trade finance</div>
+      </div>
+      <div class="activation reveal">
+        <h3>Aaziko — the activation layer</h3>
+        <p>Aaziko connects <strong>global demand</strong> to <strong>Indian supply</strong> — and in doing so, carries every one of these rails to the maker at the moment of trade: the FTA duty saving applied to the order, the EPM benefit attached to the invoice, the BharatTradeNet document generated automatically.</p>
+        <p class="pol">Policy reaches files. Infrastructure reaches people.</p>
+      </div>
+    </div>
+    <div class="missing reveal">
+      <div class="ml">The Missing Layer</div>
+      <div class="mt">Buyer access — global demand connected to Indian supply, at scale</div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · VISION 2030 -->
+<section class="field center" id="vision">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="justify-content:center">Vision 2030</div><h2>The arithmetic of <em style="color:var(--mint)">national ambition.</em></h2></div>
+    <div class="vflow reveal">
+      <div class="vbox">$860 Billion exports today</div><div class="varrow">↓</div>
+      <div class="vbox">$2 Trillion target by 2030</div><div class="varrow">↓</div>
+      <div class="vbox">Aaziko activation layer</div><div class="varrow">↓</div>
+      <div class="vbox">1 Million new exporters</div><div class="varrow">↓</div>
+      <div class="vbox">Millions of global buyers</div><div class="varrow">↓</div>
+      <div class="vbox final">India · Export Leadership</div>
+    </div>
+    <a href="#partner" class="vision-cta">What if every Indian manufacturer could sell globally? →</a>
+  </div>
+</section>
+
+<!-- 11 · PARTNERSHIP ASK -->
+<section id="partner">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">The Partnership</div>
+      <h2>Aaziko brings the platform. <em>Government brings the reach.</em></h2>
+      <p class="lead">The platform is built and running. To make 2 crore Indian manufacturers purchasable by the world, we ask government to partner on two things.</p>
+    </div>
+    <div class="partner-grid">
+      <div class="partner-card reveal">
+        <h3><span class="n">1 · </span>Product–Market Fit, cluster by cluster</h3>
+        <p>With the Export Promotion Councils, Chambers of Commerce, ODOP and the MSME Department, Aaziko runs cluster programs that hand each maker the exact market knowledge — <strong>which country wants their product, and precisely what to change, at product and packing level, to win it.</strong> The maker is already a master of the craft; we give them the market.</p>
+      </div>
+      <div class="partner-card reveal">
+        <h3><span class="n">2 · </span>Bring the world's buyers to India</h3>
+        <p>Marketing assistance to show global buyers India's products — and the <strong>world's easiest way to purchase them: in bulk, with 100% assurance, directly from 2 crore Indian manufacturers.</strong> Existing importers and small e-commerce sellers alike, sourcing from India as easily as ordering on Amazon.</p>
+      </div>
+    </div>
+    <p class="partner-close reveal">This is how India moves from <b>Make in India</b> to <b>Buy from India</b> — the government opening the markets, Aaziko executing the trade, and every Indian maker, internationally purchasable. India made payments effortless for a billion people; the world calls it <b>UPI</b>. Aaziko does for global trade what UPI did for payments.</p>
+    <div class="finale reveal">From Make in India to Buy from India.<span class="hindi">मेक इन इंडिया से — बाय फ्रॉम इंडिया तक।</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-brand"><img src="/aaziko-logo.png" alt="Aaziko" class="foot-logo" /></div>
+    <div class="foot-meta">Aaziko Global LLP · DPIIT-Recognised · Built in Surat, for India<br>LLPIN ACA-5985 · IEC ACBFA6538N · DIPP139260<br><a href="mailto:ceo@aaziko.com">ceo@aaziko.com</a> · <a href="https://aaziko.com">aaziko.com</a></div>
+  </div>
+</footer>
+
+</div>

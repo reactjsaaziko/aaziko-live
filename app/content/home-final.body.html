@@ -1,0 +1,535 @@
+<!-- Shared site header (colourful Aaziko logo + module nav) — the SAME header used
+     on every other route (/customs/, /marketplace/, …) and on the old home page.
+     Kept OUTSIDE #ates-home so the page's scoped CSS can't restyle it, and styled
+     by globals.css .nav + made mobile-usable by enhanceNav(). This restores the
+     old header in place of the earlier ATES-only .topbar. -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="Aaziko">
+      <img src="/aaziko-logo.png" alt="Aaziko" class="nav__logo" />
+    </a>
+    <div class="nav__links" style="gap:18px;">
+      <a href="/">Home</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/product-analysis/">Analysis</a>
+      <a href="/port-brain/">Port Brain</a>
+      <a href="/logistics/">Logistics</a>
+      <a href="/customs/">Customs</a>
+      <a href="/trade-agreements/">FTAs</a>
+      <a href="/inspection/">Inspection</a>
+      <a href="/finance/">Finance</a>
+      <a href="/order-assurance/">Assurance</a>
+      <a href="/vision/">Vision 2030</a>
+      <a href="/partnership/" class="nav__cta">Government engagement</a>
+    </div>
+  </div>
+</nav>
+
+<div id="ates-home">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Aaziko Global LLP","url":"https://aaziko.com",
+"description":"Trade execution system connecting Indian manufacturers to verified global buyers.",
+"address":{"@type":"PostalAddress","addressLocality":"Surat","addressRegion":"Gujarat","addressCountry":"IN"},
+"identifier":[{"@type":"PropertyValue","name":"LLPIN","value":"ACA-5985"},{"@type":"PropertyValue","name":"DPIIT Recognition","value":"DIPP139260"},{"@type":"PropertyValue","name":"IEC","value":"ACBFA6538N"}]}
+</script>
+
+<div class="credbar">
+  <div class="wrap">
+    <span>DPIIT-recognised</span><span>DIPP139260</span><span>LLPIN ACA-5985</span>
+    <span>IEC ACBFA6538N</span><span>MoU · SGCCI &amp; VCCI</span><span>Surat, Gujarat</span>
+  </div>
+</div>
+
+<!-- ① HERO -->
+<section class="hero">
+  <div class="wrap narrow">
+    <p class="eyebrow" style="justify-content:center">The Aaziko Trade Execution System</p>
+    <h1>UPI made payments easy.<span class="g">This makes global trade easy.</span></h1>
+    <p class="lede">UPI never taught anyone banking. It made a transaction easy, transparent and instant — and a billion people started paying. This does the same for global trade.</p>
+    <div class="updots" aria-hidden="true"></div>
+    <div class="btnrow">
+      <a class="btn btn-solid" href="#promise">See how it works</a>
+      <a class="btn btn-ghost" href="#2t">The $2 trillion math</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ② THE GAP -->
+<section id="gap" class="warm">
+  <div class="wrap gap-grid">
+
+    <!-- Restored to the OLD home page's hero design (per request): stacked
+         Sora headline with the emerald "2 in 1,000" lines, the saffron-flag
+         stamp and pill chips. No progress bar — the old page had none. -->
+    <div class="gap-copy">
+      <p class="eyebrow">A National Opportunity</p>
+      <h2 class="gap-title">
+        <span class="line"><span>India has 7 crore MSMEs.</span></span>
+        <span class="line"><span><em>Only 2 in 1,000 have</em></span></span>
+        <span class="line"><span><em>ever sold to the world.</em></span></span>
+      </h2>
+      <p class="sub">7.83 crore MSMEs. 99.8% have never sold to a single foreign buyer — not because the product isn't good enough, but because reaching the world is too hard.</p>
+      <div class="stamp">That 99.8% is India's single largest untapped export engine.</div>
+      <div class="chips">
+        <span class="label">Built to serve</span>
+        <span class="chip">$2 Trillion Export Vision</span>
+        <span class="chip">Export Promotion Mission</span>
+        <span class="chip">Districts as Export Hubs</span>
+        <span class="chip">Atmanirbhar Bharat</span>
+      </div>
+    </div>
+
+    <div class="gap-map">
+      <div class="india-map-wrap">
+        <svg id="india-map" viewBox="0 0 400 440" role="img" aria-label="Map of India — every district a maker, lighting up as it connects to global buyers"></svg>
+        <div class="map-caption" id="map-caption">Each dot ≈ 10 lakh MSMEs · lit dots = exporting today</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ③ THE PROMISE — two sides -->
+<section id="promise">
+  <div class="wrap center">
+    <p class="eyebrow">The promise</p>
+    <h2>The maker only makes. The buyer only buys.<br>ATES does everything in between.</h2>
+    <p class="lede">Two sides of every trade, each freed of everything that is not their job.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="sides">
+
+      <!-- BUYER -->
+      <div class="side side-buyer">
+        <p class="who">For the global buyer</p>
+        <div class="verb">Search. Select. Order.</div>
+        <p class="side-tag">The easiest way to buy from India — an experience no other country offers.</p>
+        <span class="badge">ATES does the rest</span>
+        <ul class="dl">
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#c9a662" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sourcing &amp; verified supplier — no trust worry</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#c9a662" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Quality checked by a person before it ships</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#c9a662" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Both countries' customs, handled end to end</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#c9a662" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Logistics booked, landed cost shown in full</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#c9a662" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lowest duty, under the best trade agreement</span></li>
+        </ul>
+        <p class="side-foot">India becomes a brand you can buy from as easily as anything on your phone.</p>
+      </div>
+
+      <!-- SELLER -->
+      <div class="side side-seller">
+        <p class="who">For the Indian manufacturer</p>
+        <div class="verb">Just keep making.</div>
+        <p class="side-tag">Do what you've done for years. The bulk orders now come from the whole world.</p>
+        <span class="badge">ATES does the rest</span>
+        <ul class="dl">
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No paperwork — every document handled</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No language barrier with the buyer</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Payment safe — secured before production</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No logistics to arrange</span></li>
+          <li><svg class="k" viewBox="0 0 20 20" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No customs, no tariff maze to learn</span></li>
+        </ul>
+        <p class="side-foot">Even a woman making a product at home receives a bulk order from the other side of the world.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- three properties -->
+  <div class="wrap narrow" style="margin-top:1.2rem">
+    <div class="tri">
+      <div class="tri-c">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 24l6 6 14-15" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="20"/></svg>
+        <h4>Easy</h4><p>Neither side learns customs, tariffs or trade finance. Each step is done for them.</p>
+      </div>
+      <div class="tri-c">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 24s7-13 20-13 20 13 20 13-7 13-20 13S4 24 4 24z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="6"/></svg>
+        <h4>Transparent</h4><p>Every cost, duty and milestone is visible to both sides at once. Nothing hidden in a margin.</p>
+      </div>
+      <div class="tri-c">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M24 4l16 7v11c0 10-7 17-16 21-9-4-16-11-16-21V11z" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 24l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4>Trustworthy</h4><p>Money moves only against proof. Goods inspected by a person before shipping. Neither side gambles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ WHY A NEW SYSTEM -->
+<section id="why" class="warm">
+  <div class="wrap center">
+    <p class="eyebrow">Why India needs a new export system</p>
+    <h2>Eight hands touch every export.<br>Seven add cost, not value.</h2>
+    <p class="lede">The path from an Indian factory to a global buyer was built in another century. Every hand adds days, margin and opacity — and prices the smallest makers out first.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="hands">
+      <div class="hcard old">
+        <p class="lab">The old way — 8 hands</p>
+        <ul class="pipe">
+          <li class="mk">Manufacturer <em>makes</em></li>
+          <li>Trader <em>+ margin</em></li>
+          <li>Consolidator <em>+ margin</em></li>
+          <li>Freight forwarder <em>+ margin</em></li>
+          <li>Customs agent <em>+ margin</em></li>
+          <li>Importer <em>+ margin</em></li>
+          <li>Distributor <em>+ margin</em></li>
+          <li class="mk">Buyer <em>pays</em></li>
+        </ul>
+      </div>
+      <div class="hcard new">
+        <p class="lab">With ATES — 2 hands</p>
+        <ul class="pipe"><li class="mk">Manufacturer <em>makes</em></li></ul>
+        <div class="hubblk"><b>AAZIKO</b><span>Market · Logistics · Customs · Tariff<br>Port Brain · Product Analysis · Inspect · Pay</span></div>
+        <ul class="pipe"><li class="mk">Buyer <em>pays</em></li></ul>
+        <p class="note" style="text-align:left;margin-top:1rem;color:rgba(245,242,233,.6)">The margin those 7 hands took stays with the Indian maker — or comes off the buyer's price. Usually both.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ CAPABILITIES -->
+<section id="modules">
+  <div class="wrap center">
+    <p class="eyebrow">What the system is made of</p>
+    <h2>Six capabilities. Every hard part, made automatic.</h2>
+    <p class="lede">The data behind each one is what makes trade easy, transparent and trustworthy.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="mods">
+
+      <!-- MARKETPLACE -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="14" width="28" height="20" rx="2"/><path d="M6 14l3-7h22l3 7M14 22h12" stroke-linecap="round"/></svg>
+          <span class="m-name">Marketplace</span>
+          <span class="m-fig">Free<small>List &amp; sell</small></span>
+        </div>
+        <p>A buyer searches by product, capacity and certification and finds a verified Indian maker in minutes. No listing fee, no commission.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>Reach for every maker, not just big exporters.</div>
+      </div>
+
+      <!-- LOGISTICS -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="12" width="20" height="15" rx="1"/><path d="M24 17h7l5 6v4h-12z" stroke-linejoin="round"/><circle cx="12" cy="30" r="3"/><circle cx="30" cy="30" r="3"/></svg>
+          <span class="m-name">Logistics</span>
+          <span class="m-fig">Instant<small>Freight cost</small></span>
+        </div>
+        <p>Pick a product and a destination — the shipping cost is calculated and built into the quote. No enquiry, no waiting on a forwarder.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>Landed cost known before anyone commits.</div>
+      </div>
+
+      <!-- CUSTOMS -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 4l14 6v9c0 9-6 15-14 18C12 34 6 28 6 19v-9z" stroke-linejoin="round"/><path d="M14 20l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="m-name">Customs</span>
+          <span class="m-fig">64 lakh+<small>Rules · 170+ countries</small></span>
+        </div>
+        <p>Product-wise customs rules for 170+ countries, checked weekly for anything new. The correct requirement is already known — so shipments clear, not get held.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>The paperwork wall is removed.</div>
+      </div>
+
+      <!-- TARIFF -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 30l8-9 6 5 10-13" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 13h-6M30 13v6" stroke-linecap="round"/></svg>
+          <span class="m-name">Tariff</span>
+          <span class="m-fig">4.6M<small>Data · every FTA</small></span>
+        </div>
+        <p>Trained on every trade agreement in the world. For a product from India to a market, it finds the lowest legal duty and the agreement that delivers it.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>FTA benefit taken — never left on the table.</div>
+      </div>
+
+      <!-- PORT BRAIN -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="20" cy="20" r="15"/><path d="M20 5c-5 4-5 26 0 30M20 5c5 4 5 26 0 30M5 20h30M7 13h26M7 27h26" stroke-linecap="round"/></svg>
+          <span class="m-name">Port Brain</span>
+          <span class="m-fig">22 Cr+<small>Records · 53L+ buyers</small></span>
+        </div>
+        <p>Knows which buyer imports which product, at what price, in which month — even their pain points. It matches the right Indian product to the right buyer, to bring the order home.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>Discovery stops being luck.</div>
+      </div>
+
+      <!-- PRODUCT ANALYSIS -->
+      <div class="m rv">
+        <div class="m-top">
+          <svg class="m-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 34V14M20 14l-6 6M20 14l6 6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 34h16" stroke-linecap="round"/><circle cx="20" cy="8" r="3"/></svg>
+          <span class="m-name">Product Analysis</span>
+          <span class="m-fig">Jet-boost<small>Right market · price</small></span>
+        </div>
+        <p>What if every Indian product reached the right market at the right price — on evidence, not guesswork. It tells a maker which market wants it most, at what price, and what it must meet.</p>
+        <div class="m-out"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>Product-market fit for Indian manufacturing.</div>
+      </div>
+
+    </div>
+    <p class="note">One flow: Discover · Analyze · Match · Price · Comply · Save · Inspect · Finance · Assure. Inspection is human-led — a trained inspector verifies the goods in person before money is released.</p>
+  </div>
+</section>
+
+<!-- ⑥ HOW A BUYER BUYS — live marketplace journey -->
+<section id="demo" class="warm">
+  <div class="wrap">
+    <p class="eyebrow">How a buyer buys from India</p>
+    <h2>A buyer in Germany. <span class="g">Watch what happens.</span></h2>
+    <p class="lede">No agents, no trade fair, no week of emails. One search — and the platform does what an entire export office used to do.</p>
+
+    <div class="journey">
+      <div class="jleft">
+        <!-- LIVE marketplace search — real products pulled from the Aaziko platform.
+             Deliberately NOT .rv: live boxes must never be gated behind scroll animation. -->
+        <div class="lmkt" id="lmkt" aria-label="Live Aaziko marketplace search">
+          <div class="lmkt-dh"><span class="k">Product Search · Aaziko Marketplace</span><span class="live"><i></i>LIVE READ</span></div>
+          <div class="lmkt-db">
+            <form class="lmkt-search" id="lmkt-form" role="search" autocomplete="off">
+              <span class="lmkt-search__ico" aria-hidden="true">&#128269;</span>
+              <input id="lmkt-input" class="lmkt-search__in" type="search" value="tshirt" placeholder="Search 64 lakh+ Indian products…" aria-label="Search live Aaziko products" autocomplete="off" />
+              <button type="submit" class="lmkt-search__go">Search →</button>
+            </form>
+            <div class="lmkt-grid" id="lmkt-grid"></div>
+            <div class="lmkt-foot" id="lmkt-foot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Finds the manufacturer</b> — 14 Morbi makers matched, with capacity and certifications.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Calculates the tariff</b> — India–EU FTA preference applied automatically.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Checks compliance</b> — CE marking and EU import rules verified for this exact product.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Books logistics</b> — Morbi → Mundra → Hamburg, one landed-cost quote.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Generates documents</b> — invoice, packing list, certificate of origin, B/L.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Arranges payment</b> — escrow protection for the buyer, assured payment for the maker.</span></div>
+        <div class="step-row"><span class="ck">✓</span><span class="t"><b>Tracks the shipment</b> — factory floor to Hamburg warehouse, with live production evidence.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ NINE CAPABILITIES — the one continuous flow -->
+<section id="capabilities" class="center">
+  <div class="wrap">
+    <p class="eyebrow">One platform · Nine national capabilities</p>
+    <h2>From first search <span class="g">to assured delivery.</span></h2>
+    <p class="lede">Nine capabilities, one continuous flow. The Indian manufacturer only manufactures — the platform does everything else.</p>
+
+    <div class="caps">
+      <a class="cap-card" href="/marketplace/"><span class="cn">01</span><span class="cico">🔍</span><span class="cv">Discover</span><span class="cm">Marketplace</span></a>
+      <a class="cap-card" href="/product-analysis/"><span class="cn">02</span><span class="cico">📊</span><span class="cv">Analyze</span><span class="cm">Product Fit</span></a>
+      <a class="cap-card" href="/port-brain/"><span class="cn">03</span><span class="cico">🧠</span><span class="cv">Match</span><span class="cm">Port Brain</span></a>
+      <a class="cap-card" href="/logistics/"><span class="cn">04</span><span class="cico">🚢</span><span class="cv">Price</span><span class="cm">Logistics</span></a>
+      <a class="cap-card" href="/customs/"><span class="cn">05</span><span class="cico">🛃</span><span class="cv">Comply</span><span class="cm">Customs 3.0</span></a>
+      <a class="cap-card" href="/trade-agreements/"><span class="cn">06</span><span class="cico">🤝</span><span class="cv">Save</span><span class="cm">FTA Engine</span></a>
+      <a class="cap-card" href="/inspection/"><span class="cn">07</span><span class="cico">📷</span><span class="cv">Inspect</span><span class="cm">QC &amp; Evidence</span></a>
+      <a class="cap-card" href="/finance/"><span class="cn">08</span><span class="cico">💰</span><span class="cv">Finance</span><span class="cm">Export Credit</span></a>
+      <a class="cap-card" href="/order-assurance/"><span class="cn">09</span><span class="cico">🛡️</span><span class="cv">Assure</span><span class="cm">100% Assurance</span></a>
+    </div>
+
+    <a href="#demo" class="caps-cta">Explore the capabilities live →</a>
+  </div>
+</section>
+
+<!-- ⑧ RESULTS -->
+<section id="results" class="dark">
+  <div class="wrap center">
+    <p class="eyebrow">The result for India's exports</p>
+    <h2>Easy, transparent, trustworthy trade — and this is what follows.</h2>
+  </div>
+  <div class="wrap">
+    <div class="res">
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="10" r="4"/><path d="M4 25c0-4 3-7 7-7s7 3 7 7M20 8h6M23 5v6" stroke-linecap="round"/></svg>
+        <b>New exporters, not just more exports</b><p>Makers who never shipped abroad complete a first order.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3l3 9h9l-7 6 3 9-8-6-8 6 3-9-7-6h9z" stroke-linejoin="round"/></svg>
+        <b>Districts that ship, not only make</b><p>ODOP products become real shipments with a destination and value.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><circle cx="15" cy="15" r="12"/><path d="M3 15h24M15 3c4 3 4 21 0 24M15 3c-4 3-4 21 0 24" stroke-linecap="round"/></svg>
+        <b>Market diversification, by evidence</b><p>Makers pointed at the country with demand, not the one they've heard of.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22l6-7 5 4 8-11" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 8h-5M25 8v5" stroke-linecap="round"/></svg>
+        <b>Higher trade-agreement use</b><p>Every eligible shipment claims its preference. The benefit reaches the invoice.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="12" rx="1"/><path d="M20 14h4l3 4v4h-7z" stroke-linejoin="round"/><path d="M12 4v6M9 7l3-3 3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>Growth in goods, where it's slowest</b><p>Physical goods, from small makers, into new markets — the flat segment.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3l11 5v7c0 7-5 11-11 14C9 26 4 22 4 15V8z" stroke-linejoin="round"/><path d="M11 15l3 3 6-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>Fewer rejections abroad</b><p>Inspection before shipment means fewer disputes — a stronger India brand.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 26V6h11l3 3h4v17z" stroke-linejoin="round"/><circle cx="15" cy="16" r="3"/></svg>
+        <b>Export-linked jobs in clusters</b><p>An order is production, shifts and wages in that district.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="5" width="20" height="20" rx="2"/><path d="M10 16l3 3 7-8M10 11h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>District export data, free</b><p>Every order carries district, HS code, destination, value — a report you can run.</p>
+      </div>
+      <div class="ri">
+        <svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4v22M15 26l-6-6M15 26l6-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 8h20" stroke-linecap="round"/></svg>
+        <b>Schemes that arrive</b><p>Support surfaced inside an order the maker is already placing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ THE $2T MATH -->
+<section id="2t" class="ink">
+  <div class="wrap center">
+    <p class="eyebrow">The national payoff</p>
+    <h2>Open 20% of India's makers to the world.<br>The $2 trillion target becomes real.</h2>
+    <p class="lede">India's exports hit a record <strong>US$863.1 billion</strong> in FY 2025-26 — but merchandise grew just 0.93%. The gap to $2 trillion is closed in goods, by makers not exporting today. Move the sliders.</p>
+  </div>
+
+  <div class="wrap narrow">
+    <div class="model">
+      <div class="model-head">Set your own assumptions — the arithmetic follows</div>
+      <div class="model-body">
+        <div class="ctrl">
+          <label for="rate"><span>Share of India's 7.83 cr MSMEs opened to the world</span><output id="rateOut">20%</output></label>
+          <input type="range" id="rate" min="1" max="30" value="20" step="1">
+          <div class="ends"><span>1%</span><span>30%</span></div>
+        </div>
+        <div class="ctrl">
+          <label for="val"><span>Average yearly export per activated maker</span><output id="valOut">₹50 lakh</output></label>
+          <input type="range" id="val" min="10" max="500" value="50" step="10">
+          <div class="ends"><span>₹10 lakh</span><span>₹5 crore</span></div>
+        </div>
+        <div class="outs" aria-live="polite">
+          <div class="out2"><b id="oExp">1.57 crore</b><span>Makers exporting</span></div>
+          <div class="out2"><b id="oAdd">$890 B</b><span>Added exports/yr</span></div>
+          <div class="out2"><b id="oTot">$1.75 T</b><span>Total exports</span></div>
+          <div class="out2"><b id="oGap">78%</b><span>Of the $2T gap closed</span></div>
+        </div>
+        <div class="gapwrap">
+          <div class="gaplab"><span>$863 B today</span><span>$2 T target</span></div>
+          <div class="gapbar" role="img" aria-label="Share of the gap to two trillion dollars closed"><div class="gapfill" id="fill"></div></div>
+        </div>
+        <p class="assume">Baseline US$863.1 B (FY 2025-26) · target US$2 T · MSME base 7.83 crore · ₹88 = US$1. A projection from your two inputs, not a forecast.</p>
+      </div>
+    </div>
+    <p class="lede center" style="margin:2.2rem auto 0"><strong>The factories are already standing. The markets are already open. ATES connects the two.</strong></p>
+  </div>
+</section>
+
+<!-- ⑩ WITH THE SCHEMES -->
+<section id="policy" class="warm">
+  <div class="wrap">
+    <p class="eyebrow">The policy foundation</p>
+    <h2>The Government has built the rails. <span class="g">One layer is missing.</span></h2>
+    <p class="lede">Make in India built the capacity. The FTAs opened the doors. The Export Promotion Mission funded the journey. What no policy can do by itself is put a paying global buyer in front of every Indian maker. That is an infrastructure problem — and it is solved.</p>
+
+    <div class="policy">
+      <div class="gov-card">
+        <h3>Government infrastructure — built ✓</h3>
+        <div class="gov-item"><span class="gk">✓</span><span>Make in India — manufacturing capacity</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>Districts as Export Hubs · ODOP — 1,243 products, 775 districts</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>Export Promotion Mission — ₹25,060 Cr (FY26–31)</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>15 FTAs covering 27+ countries — UAE, Australia, EFTA, UK, Oman…</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>BharatTradeNet — digital trade documents</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>Trade Connect ePlatform · NIRYAT — trade intelligence</span></div>
+        <div class="gov-item"><span class="gk">✓</span><span>CGSE ₹20,000 Cr · ECGC · Niryat Protsahan — trade finance</span></div>
+      </div>
+      <div class="activation">
+        <h3>Aaziko — the activation layer</h3>
+        <p>Aaziko connects <strong>global demand</strong> to <strong>Indian supply</strong> — and in doing so, carries every one of these rails to the maker at the moment of trade: the FTA duty saving applied to the order, the EPM benefit attached to the invoice, the BharatTradeNet document generated automatically.</p>
+        <p class="pol">Policy reaches files. Infrastructure reaches people.</p>
+      </div>
+    </div>
+
+    <div class="missing">
+      <div class="ml">The Missing Layer</div>
+      <div class="mt">Buyer access — global demand connected to Indian supply, at scale</div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑪ VISION 2030 — the arithmetic -->
+<section id="vision" class="field center">
+  <div class="wrap">
+    <p class="eyebrow">Vision 2030</p>
+    <h2>The arithmetic of <span class="g">national ambition.</span></h2>
+    <div class="vflow">
+      <div class="vbox">$860 Billion exports today</div><div class="varrow">↓</div>
+      <div class="vbox">$2 Trillion target by 2030</div><div class="varrow">↓</div>
+      <div class="vbox">Aaziko activation layer</div><div class="varrow">↓</div>
+      <div class="vbox">1 Million new exporters</div><div class="varrow">↓</div>
+      <div class="vbox">Millions of global buyers</div><div class="varrow">↓</div>
+      <div class="vbox final">India · Export Leadership</div>
+    </div>
+    <a href="#ask" class="vision-cta">What if every Indian manufacturer could sell globally? →</a>
+  </div>
+</section>
+
+<!-- ⑫ WHAT WE'RE ASKING FOR — two live programmes -->
+<section id="ask" class="dark">
+  <div class="wrap center">
+    <p class="eyebrow">What we're asking for</p>
+    <h2>Two things already in motion. Government support makes them move faster.</h2>
+    <p class="lede">No funding ask. Two live Aaziko programmes that existing government machinery can accelerate — turning effort already underway into export orders sooner.</p>
+  </div>
+  <div class="wrap">
+    <div class="asks">
+
+      <!-- ASK 1 -->
+      <div class="askc">
+        <p class="num">Ask 01 · Product-market-fit, industry by industry</p>
+        <h3>Take our industry-wise product-market-fit findings to makers, together.</h3>
+        <span class="doing">Aaziko is running this now</span>
+        <p>Aaziko is holding an event to share, industry by industry, what the world is buying and at what price — the exact product-market-fit knowledge a maker needs to make for a target market. Sharing it alongside <strong>EPCs, DGFT and Chambers of Commerce</strong> reaches far more makers, far faster.</p>
+        <div class="schemes">
+          <a href="https://www.dgft.gov.in" target="_blank" rel="noopener">DGFT</a>
+          <a href="https://www.epch.in" target="_blank" rel="noopener">Export Promotion Councils</a>
+          <a href="#" target="_blank" rel="noopener">Chambers of Commerce</a>
+        </div>
+        <p class="result"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Result:</b> more Indian makers making the right product for the right market — a stronger India brand and more export orders.</span></p>
+      </div>
+
+      <!-- ASK 2 -->
+      <div class="askc">
+        <p class="num">Ask 02 · 200 importers, ready to be pitched</p>
+        <h3>Help us pitch Indian products to 200 global importers already sourcing elsewhere.</h3>
+        <span class="doing">Aaziko is connected to them now</span>
+        <p>Aaziko is connected with <strong>200 importers</strong> who currently buy from other countries. Each can be pitched a well-researched Indian product. Paired with <strong>MAI</strong> and the <strong>Export Promotion Mission</strong>, ATES can convert these relationships into orders for Indian makers.</p>
+        <div class="schemes">
+          <a href="https://www.epch.in/marketing-access-assistance" target="_blank" rel="noopener">Market Access Initiative</a>
+          <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2199733&amp;reg=3&amp;lang=1" target="_blank" rel="noopener">Export Promotion Mission</a>
+        </div>
+        <p class="result"><svg class="k" viewBox="0 0 16 16" fill="none" stroke="#0d5c48" stroke-width="2"><path d="M3 8l3 3 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Result:</b> buyers who source elsewhere today, placing orders with Indian makers instead.</span></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ⑬ CLOSE -->
+<section class="dark center">
+  <div class="wrap narrow">
+    <p class="eyebrow">From here</p>
+    <p class="lede">UPI made paying easy, and a billion people started paying. Global trade is where payments were.</p>
+    <h2 style="margin-top:1.8rem">From Make in India to Buy from India.</h2>
+    <p class="hi">मेक इन इंडिया से — बाय फ्रॉम इंडिया तक।</p>
+    <div class="btnrow">
+      <a class="btn btn-solid" style="background:var(--brass);color:var(--emerald-ink)" href="#modules">See a live order move</a>
+      <a class="btn btn-ghost" style="border-color:var(--line-dark);color:var(--paper)" href="mailto:contact@aaziko.com">contact@aaziko.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Aaziko Global LLP · Surat, Gujarat</span>
+    <span>DPIIT-recognised · LLPIN ACA-5985 · DIPP139260 · IEC ACBFA6538N</span>
+    <span>MoU · SGCCI &amp; VCCI</span>
+  </div>
+</footer>
+
+</div>
