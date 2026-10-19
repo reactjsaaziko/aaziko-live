@@ -8,502 +8,158 @@ title: "Change Documentation — aaziko-live"
 
 <!-- AAZIKO-CHANGELOG:INSERT-AFTER -->
 
-## 2026-10-19 16:13 — branch `main`
-
-### Overview
-
-This push to branch `main` changed **2 file(s)**: 2 new, 0 modified, 0 removed (+457 / −0 lines).
-
-Main areas touched: `.aaziko-flow` (1), `.github/workflows` (1).
-
-### New files
-
-#### `.aaziko-flow/changelog.mjs`
-
-*New file — 347 lines*
-
-- Defines: `sh`, `shSafe`, `git`, `esc`, `code`, `list`, `repo`, `declName`, `collect`, `minusSet` and 9 more.
-- Uses: `node:child_process`, `node:fs`, `node:path`.
-- Reads environment variables: `BEFORE_SHA`, `AFTER_SHA`, `BASE_BRANCH`, `BRANCH`.
-
-**Other new files**
-
-- `.github/workflows/aaziko-changelog.yml` — 110 lines
-
-### Impact
-
-- Code now reads `BEFORE_SHA` — make sure it is set in the `.env` / deployment.
-- Code now reads `AFTER_SHA` — make sure it is set in the `.env` / deployment.
-- Code now reads `BASE_BRANCH` — make sure it is set in the `.env` / deployment.
-- Code now reads `BRANCH` — make sure it is set in the `.env` / deployment.
-- Build/deploy configuration changed: `.github/workflows/aaziko-changelog.yml` — re-check the build and deployment.
-
----
-
 <!-- AAZIKO-CHANGELOG:HISTORY-START -->
 
-> **History before automatic documentation was switched on** — one entry per day of the `main` branch, newest first.
+> History of the main branch, one entry per day, newest first.
 
-## 2026-09-26 — branch `main` (history)
+## 19 October 2026 — main branch (history)
 
-### Overview
+### Summary
 
-On this day, branch `main` received changes to **1 file(s)**: 1 new, 0 modified, 0 removed (+94 / −0 lines).
+On 19 October 2026, the main branch received changes to 2 files: 2 added, 0 changed and 0 removed, with 463 lines added and 0 lines removed in total. Most of the work was in the main project folder and the workflows area.
 
-Main areas touched: `.github/workflows` (1).
+### What was added
 
-### New files
-
-**Other new files**
-
-- `.github/workflows/backup-to-gitlab.yml` — 94 lines
+- 2 automatic change documentation files were added in the workflows area.
 
 ### Impact
 
-- Build/deploy configuration changed: `.github/workflows/backup-to-gitlab.yml` — re-check the build and deployment.
+- These changes are self-contained; no other part of the project depends on them.
 
 ---
 
-## 2026-08-29 — branch `main` (history)
+## 26 September 2026 — main branch (history)
 
-### Overview
+### Summary
 
-On this day, branch `main` received changes to **86 file(s)**: 86 new, 0 modified, 0 removed (+24715 / −0 lines).
+On 26 September 2026, the main branch received changes to 1 file: 1 added, 0 changed and 0 removed, with 94 lines added and 0 lines removed in total. Most of the work was in the workflows area.
 
-Main areas touched: `app/content` (31), `app` (12), `(project root)` (11), `analytics-server` (9), `app/components` (4), `app/components/logistic-cost` (3).
+### What was added
 
-### New files
-
-#### `app/components/logistic-cost/CargoDetailsContent.tsx`
-
-*New file — 4296 lines*
-
-- Defines: `ProductInput`, `Visualization3D`, `Alert`, `CircularProgress`, `CustomTextField`, `useFetchMutation`, `promise`, `useCalculateMultipleContainersMutation`, `useGetEnhanced3DVisualizationMutation`, `_Donut`, `VoyageCard`, `fmtUsd`, `onWheel`, `Box`, `recompute`, `adjustColor`, `f`, `gridBg`, `rowFaceStyle`, `endFace`, `CargoDetailsContentProps`, `CargoDetailsContent`, `PortOpt`, `PortHint`, `portOptions`, `CargoTypeOption`, `isCylinder`, `nameMatchesSize`, `lengthMatchesSize`, `sizeMatches`, `clampedContainerIdx`, `toM`, `render`.
-- Uses: `react`, `next/dynamic`, `@/app/content/_api`.
-
-#### `app/content/product-analysis.script.js`
-
-*New file — 1730 lines*
-
-- Defines: `init`, `ftaFor`, `esc`, `fmtPct`, `pctClass`, `pctVal`, `pctStr`, `numOrNull`, `curatedMatches`, `liveMatches`, `showSuggestions`, `resolveHs`, `productKeyForHs`, `metric`, `buyersCell`, `statStrip`, `profilePanel`, `whereToWin`, `playbookPanel`, `liveTag`, `mapModRow`, `recToPbSteps`, `renderRecommendations`, `renderRecBodies`, `miniLoader`, `pbCertHTML`, `marginHTML`, `competitorsHTML`, `ftaHTML`, `renderCompetitors`, `pbBodyHTML`, `renderPbBody`, `wtwBodyHTML`, `renderWtwBody`, `aiBar`, `normText`, `itemDetail`, `uniqueDetail`, `normItems`, `normBlocks`, `sleep`, `laneReqs`, `macmapHasStage`, `macmapHasAny`, `macmapReqToLiveItem`, `field`, `laneToggleHTML`, `pill`, `macmapStageHTML`, `pollMacmap`, `cmpTabsInner`, `cmpChevron`, `cmpNoteRow`, `itemsGridHTML`, `cmpBodyHTML`, `laneToggleActive`, `renderCmpBody`, `certBody`, `certBodyHTML`, `renderCertBody`, `certPanel`, `marketAnalysisPanel`, `marketBodyHTML`, `renderMarketBody`, `ctaPanel`, `toTitle`, `fmtAmount`, `fmtQty`, `fmtPrice`, `buyersPanelShell`, `buyerCard`, `buyerDetail`, `renderBuyersBody`, `renderBuyers`, `collectMacmapMeasures`, `fetchMacmap`, `measuresHTML`, `complianceBaselineHTML`, `items`, `blocks`, `card`, `compliancePanelShell`, `renderCompliance`, `renderFallback`, `render`, `selectCountry`, `setActiveTab`.
-- Uses: `./_api.js`, `./_demotour.js`.
-
-#### `analytics-server/index.js`
-
-*New file — 1190 lines*
-
-- Defines: `TEXT`, `pageKey`, `pageLabel`, `utcDay`, `refHost`, `ipHash`, `clip`, `geoLookup`, `isPublicIp`, `fetchGeoExternal`, `finish`, `countryName`, `auth`, `cutoff`, `aggregate`, `touchVisitor`, `buildStats`, `windowSummary`, `buildVisitor`, `csvCell`, `istTime`, `esc`, `num`, `when`, `cc`, `loc`, `locText`, `respChip`, `result`, `loadResp`, `renderResp`, `closeResp`, `renderGeo`, `renderVisitors`, `loadVisitor`, `load`, `render`, `syncDl`, `startOfLocalDay`, `localDateLabel`, `pct`, `buildDigest`, `kpi`, `mailTransport`, `sendDigest`, `msUntilNextDigest`, `scheduleDigest`, `runRetention`, `scheduleRetention`.
-- Adds API endpoints: `GET /healthz`, `POST /api/track`, `GET /live-stats/api/stats`, `GET /api/stats`.
-- Uses: `path`, `fs`, `crypto`, `https`, `express`, `better-sqlite3`, `nodemailer`, `geoip-lite`, `./world-path.js`.
-- Reads environment variables: `ANALYTICS_PORT`, `ANALYTICS_USER`, `ANALYTICS_PASS`, `ANALYTICS_SALT`, `GEO_CITY_FALLBACK`, `DIGEST_ENABLED`, `DIGEST_TO`, `DIGEST_HOUR`, `DIGEST_TZ_OFFSET_MIN`, `SITE_URL`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `DIGEST_FROM`, `RETENTION_DAYS`.
-
-#### `app/content/customs.script.js`
-
-*New file — 625 lines*
-
-- Defines: `init`, `initPage`, `setChrome`, `initLiveBox`, `esc`, `debounce`, `flag`, `countryDropdown`, `close`, `open`, `digits`, `classify`, `critToImp`, `chip`, `reqAccordion`, `plainRow`, `guideBlock`, `plainBlock`, `warningsHTML`, `guideHasItems`, `any`, `guideListFor`, `collectMacmap`, `updateRegCount`, `macmapHTML`, `startLoading`, `defaultTitle`, `renderTab`, `renderActive`, `consumerContent`, `fetchCountryHs`, `fetchMacmap`, `analyze`, `flash`.
-- Uses: `./_api.js`, `./_demotour.js`.
-
-#### `app/content/port-brain.script.js`
-
-*New file — 611 lines*
-
-- Defines: `init`, `esc`, `safeDecode`, `titleCase`, `flagFor`, `scoreFor`, `tierBadge`, `ringHTML`, `cardHTML`, `note`, `fmt`, `countryMatches`, `closeCountryMenu`, `chooseCountry`, `renderCountryMenu`, `searchUrl`, `itemsOf`, `dedupeByName`, `productSearch`, `say`, `settle`, `vocab`, `editDistLe`, `correctProductTerm`, `runTextSearch`, `search`, `progress`, `updateHeadline`, `fmtIndianScale`, `setAll`.
-- Uses: `./_api.js`, `./_demotour.js`, `./_hswords.js`.
-
-#### `app/components/logistic-cost/AirLandModel3D.tsx`
-
-*New file — 563 lines*
-
-- Defines: `Model3DProduct`, `AirLandModel3DProps`, `Placement`, `uldChamfer`, `packBoxes`, `insideContour`, `useUldGeometry`, `Cargo`.
-- Uses: `react`, `@react-three/fiber`, `@react-three/drei`, `three`.
-
-#### `app/content/marketplace.script.js`
-
-*New file — 455 lines*
-
-- Defines: `init`, `productSpotlight`, `setMain`, `svgEl`, `div`, `setActive`, `advance`, `play`, `stop`, `restart`, `setChrome`.
-- Uses: `./_livemarket.js`, `./_demotour.js`.
-
-#### `app/components/AnalyticsTracker.js`
-
-*New file — 413 lines*
-
-- Defines: `endpoint`, `rid`, `stored`, `applyOptOutParam`, `optedOut`, `send`, `fieldText`, `fieldLabel`, `collectQuery`, `isTrigger`, `summarizeResult`, `absUrl`, `snapshotHtml`, `captureResult`, `fire`, `AnalyticsTracker`, `scan`, `onInteract`.
-- Uses: `react`, `next/navigation`.
-
-#### `app/content/trade-agreements.script.js`
-
-*New file — 312 lines*
-
-- Defines: `init`, `esc`, `countryLabel`, `relationLabel`, `closeProductMenu`, `chooseProduct`, `findProducts`, `productTokens`, `resolveProduct`, `statusBadge`, `members`, `agreementCard`, `loadPartners`, `search`.
-- Uses: `./_api.js`, `./_demotour.js`.
-
-#### `app/content/home.script.js`
-
-*New file — 244 lines*
-
-- Defines: `init`, `inPoly`, `outlinePath`, `setMapToday`, `setMapAaziko`, `animateCount`, `tick`, `staggerReveal`, `play`, `count`, `rup`, `usd`, `upd`.
-- Uses: `./_livemarket.js`.
-
-#### `app/content/_demotour.js`
-
-*New file — 238 lines*
-
-- Defines: `runDemoTour`, `guard`, `wait`, `caption`, `type`, `pick`, `press`, `result`, `ok`, `finish`, `play`.
-
-#### `app/content/_livemarket.js`
-
-*New file — 168 lines*
-
-- Defines: `esc`, `absMedia`, `imgUrl`, `imgUrls`, `unitPrice`, `moq`, `money`, `initLiveMarket`, `select`, `render`, `search`.
-- Uses: `./_api.js`.
-
-#### `app/content/_api.js`
-
-*New file — 140 lines*
-
-- Defines: `getJSON`, `postJSON`, `loadingHTML`, `sourceTag`.
-
-#### `app/content/inspection.script.js`
-
-*New file — 138 lines*
-
-- Defines: `init`, `render`.
-- Uses: `./_demotour.js`.
-
-#### `app/content/_indiamap.js`
-
-*New file — 134 lines*
-
-- Defines: `inPoly`, `outlinePath`, `initIndiaMap`, `setToday`, `setAaziko`.
-
-#### `scripts/generate.mjs`
-
-*New file — 130 lines*
-
-- Defines: `decodeEntities`, `extractTitle`, `extractDescription`, `extractHeadStyles`, `splitBody`, `rewriteLinks`.
-- Uses: `node:fs`, `node:path`, `node:url`.
-
-#### `tests/live-response-capture.test.js`
-
-*New file — 116 lines*
-
-- Defines: `sleep`, `fill`, `click`, `submit`, `pick`, `selOpt`, `drive`, `runOnCollector`, `readDb`, `purge`.
-- Uses: `/home/aaziko/aaziko/node_modules/puppeteer-core`, `child_process`, `${DB_NM}`.
-
-#### `app/content/order-assurance.script.js`
-
-*New file — 108 lines*
-
-- Defines: `init`, `setChrome`, `renderAssure`, `stop`, `play`.
-
-#### `app/components/enhanceNav.js`
-
-*New file — 100 lines*
-
-- Defines: `enhanceNav`, `norm`, `setOpen`, `onChange`.
-
-#### `app/content/logistics.script.js`
-
-*New file — 97 lines*
-
-- Defines: `init`.
-- Uses: `./_demotour.js`.
-
-#### `app/components/logistic-cost/LogisticsLive.tsx`
-
-*New file — 92 lines*
-
-- Defines: `LogisticsLive`.
-- Uses: `react`, `react-dom/client`, `./CargoDetailsContent`, `@/app/components/enhanceNav`.
-
-#### `app/components/animateDemoResults.js`
-
-*New file — 85 lines*
-
-- Defines: `animateDemoResults`, `countUp`, `tick`, `reveal`.
-
-#### `app/components/enhanceDemoFields.js`
-
-*New file — 65 lines*
-
-- Defines: `enhanceDemoFields`, `isField`, `hasValue`, `flash`, `onEdit`.
-
-#### `app/content/finance.script.js`
-
-*New file — 60 lines*
-
-- Defines: `init`, `fmt`, `calc`.
-
-#### `app/content/home-final.script.js`
-
-*New file — 54 lines*
-
-- Defines: `init`, `count`, `rup`, `usd`, `go`.
-- Uses: `./_indiamap.js`, `./_livemarket.js`.
-
-#### `analytics-server/seed-sample.js`
-
-*New file — 48 lines*
-
-- Defines: `utcDay`.
-- Uses: `path`, `better-sqlite3`, `fs`.
-
-#### `app/StaticHtmlPage.js`
-
-*New file — 47 lines*
-
-- Defines: `StaticHtmlPage`.
-- Uses: `react`, `@/app/components/enhanceNav`, `@/app/components/enhanceDemoFields`, `@/app/components/animateDemoResults`.
-
-#### `app/content/partnership.script.js`
-
-*New file — 40 lines*
-
-- Defines: `init`, `fmtLiveValue`, `simulateLiveData`, `pollLiveData`.
-
-#### `app/layout.js`
-
-*New file — 37 lines*
-
-- Defines: `RootLayout`.
-- Uses: `./globals.css`, `./tailwind.css`, `@/app/components/AnalyticsTracker`.
-
-#### `package.json`
-
-*New file — 30 lines*
-
-- Added package `@react-three/drei` ^9.122.0
-- Added package `@react-three/fiber` ^8.18.0
-- Added package `html2canvas` ^1.4.1
-- Added package `next` 14.2.35
-- Added package `react` 18.3.1
-- Added package `react-dom` 18.3.1
-- Added package `three` ^0.169.0
-- Added package `@types/node` ^25.9.3
-- Added package `@types/react` ^19.2.17
-- Added package `@types/react-dom` ^19.2.3
-- Added package `autoprefixer` ^10.5.0
-- Added package `postcss` ^8.5.15
-- Added package `tailwindcss` ^3.4.19
-- Added package `typescript` ^6.0.3
-- Added npm script `dev`
-- Added npm script `build`
-- Added npm script `start`
-- Added npm script `lint`
-
-#### `next.config.js`
-
-*New file — 25 lines*
-
-- Data / content file (no functions or components).
-- Reads environment variables: `AAZIKO_BASE_PATH`.
-
-#### `app/page.js`
-
-*New file — 19 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/home-final.body.html`, `@/app/home-final.css`.
-
-#### `app/home-classic/page.js`
-
-*New file — 18 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/home.body.html`, `@/app/home.css`.
-
-#### `analytics-server/package.json`
-
-*New file — 16 lines*
-
-- Added package `better-sqlite3` ^11.8.1
-- Added package `express` ^4.21.2
-- Added package `geoip-lite` ^1.4.10
-- Added package `nodemailer` ^6.9.16
-- Added npm script `start`
-
-#### `app/content/vision.script.js`
-
-*New file — 16 lines*
-
-- Defines: `init`.
-
-#### `app/customs/page.js`
-
-*New file — 13 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/customs.body.html`, `@/app/customs.css`.
-
-#### `app/logistics/page.js`
-
-*New file — 13 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/components/logistic-cost/LogisticsLive`, `@/app/content/logistics.body.html`, `@/app/logistics.css`.
-
-#### `app/marketplace/page.js`
-
-*New file — 13 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/marketplace.body.html`, `@/app/marketplace.css`.
-
-#### `app/order-assurance/page.js`
-
-*New file — 13 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/order-assurance.body.html`, `@/app/order-assurance.css`.
-
-#### `app/port-brain/page.js`
-
-*New file — 13 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/port-brain.body.html`, `@/app/port-brain.css`.
-
-#### `tailwind.config.js`
-
-*New file — 13 lines*
-
-- Data / content file (no functions or components).
-
-#### `app/finance/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/finance.body.html`.
-
-#### `app/inspection/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/inspection.body.html`.
-
-#### `app/partnership/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/partnership.body.html`.
-
-#### `app/product-analysis/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/product-analysis.body.html`.
-
-#### `app/trade-agreements/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/trade-agreements.body.html`.
-
-#### `app/vision/page.js`
-
-*New file — 11 lines*
-
-- Defines: `Page`.
-- Uses: `@/app/StaticHtmlPage`, `@/app/content/vision.body.html`.
-
-#### `postcss.config.js`
-
-*New file — 6 lines*
-
-- Data / content file (no functions or components).
-
-#### `next-env.d.ts`
-
-*New file — 5 lines*
-
-- Data / content file (no functions or components).
-
-#### `analytics-server/world-path.js`
-
-*New file — 3 lines*
-
-- Data / content file (no functions or components).
-
-#### `app/content/_hswords.js`
-
-*New file — 2 lines*
-
-- Data / content file (no functions or components).
-
-**Other new files**
-
-- `app/globals.css` — 2967 lines
-- `package-lock.json` — 2527 lines
-- `analytics-server/package-lock.json` — 1529 lines
-- `app/content/home-final.body.html` — 535 lines
-- `app/content/customs.body.html` — 405 lines
-- `app/home-final.css` — 402 lines
-- `app/content/trade-agreements.body.html` — 340 lines
-- `app/home.css` — 317 lines
-- `app/content/home.body.html` — 316 lines
-- `app/content/marketplace.body.html` — 226 lines
-- `app/port-brain.css` — 216 lines
-- `app/content/port-brain.body.html` — 202 lines
-- `app/marketplace.css` — 197 lines
-- `app/content/partnership.body.html` — 180 lines
-- `app/content/finance.body.html` — 173 lines
-- `app/content/order-assurance.body.html` — 172 lines
-- `app/content/product-analysis.body.html` — 165 lines
-- `app/content/logistics.body.html` — 161 lines
-- `app/content/inspection.body.html` — 158 lines
-- `app/logistics.css` — 150 lines
-- `app/order-assurance.css` — 147 lines
-- `app/customs.css` — 125 lines
-- `analytics-server/deploy.sh` — 101 lines
-- `app/content/vision.body.html` — 94 lines
-- `README.md` — 71 lines
-- `analytics-server/README.md` — 69 lines
-- `scripts/deploy-live.sh` — 50 lines
-- `tsconfig.json` — 39 lines
-- `analytics-server/.env.example` — 28 lines
-- `.gitignore` — 18 lines
-- `jsconfig.json` — 7 lines
-- `analytics-server/.gitignore` — 4 lines
-- `app/tailwind.css` — 3 lines
-- `tsconfig.tsbuildinfo` — 1 lines
-- `public/aaziko-logo.png` — binary file
+- 1 build and deployment setting file was added in the workflows area.
 
 ### Impact
 
-- New API endpoint `GET /healthz` is available.
-- New API endpoint `POST /api/track` is available.
-- New API endpoint `GET /live-stats/api/stats` is available.
-- New API endpoint `GET /api/stats` is available.
-- Code now reads `ANALYTICS_PORT` — make sure it is set in the `.env` / deployment.
-- Code now reads `ANALYTICS_USER` — make sure it is set in the `.env` / deployment.
-- Code now reads `ANALYTICS_PASS` — make sure it is set in the `.env` / deployment.
-- Code now reads `ANALYTICS_SALT` — make sure it is set in the `.env` / deployment.
-- Code now reads `GEO_CITY_FALLBACK` — make sure it is set in the `.env` / deployment.
-- Code now reads `DIGEST_ENABLED` — make sure it is set in the `.env` / deployment.
-- Code now reads `DIGEST_TO` — make sure it is set in the `.env` / deployment.
-- Code now reads `DIGEST_HOUR` — make sure it is set in the `.env` / deployment.
-- Code now reads `DIGEST_TZ_OFFSET_MIN` — make sure it is set in the `.env` / deployment.
-- Code now reads `SITE_URL` — make sure it is set in the `.env` / deployment.
-- Code now reads `SMTP_HOST` — make sure it is set in the `.env` / deployment.
-- Code now reads `SMTP_PORT` — make sure it is set in the `.env` / deployment.
-- Code now reads `SMTP_SECURE` — make sure it is set in the `.env` / deployment.
-- Code now reads `SMTP_USER` — make sure it is set in the `.env` / deployment.
-- Code now reads `SMTP_PASS` — make sure it is set in the `.env` / deployment.
-- Code now reads `DIGEST_FROM` — make sure it is set in the `.env` / deployment.
-- Code now reads `RETENTION_DAYS` — make sure it is set in the `.env` / deployment.
-- Dependencies changed in `package.json` — run `npm install` and rebuild the Docker image before deploying.
-- Code now reads `AAZIKO_BASE_PATH` — make sure it is set in the `.env` / deployment.
-- Dependencies changed in `analytics-server/package.json` — run `npm install` and rebuild the Docker image before deploying.
-- Build/deploy configuration changed: `analytics-server/.env.example` — re-check the build and deployment.
-- Build/deploy configuration changed: `next.config.js` — re-check the build and deployment.
-- Build/deploy configuration changed: `tsconfig.json` — re-check the build and deployment.
-- 1 test file(s) were added or changed — run the tests.
+- Build or deployment settings changed, so the build and the deployment should be checked.
+
+---
+
+## 29 August 2026 — main branch (history)
+
+### Summary
+
+On 29 August 2026, the main branch received changes to 86 files: 86 added, 0 changed and 0 removed, with 24715 lines added and 0 lines removed in total. Most of the work was in the content area, the main project folder, the analytics server area, the logistic cost area and the scripts area.
+
+### What was added
+
+- A new cargo details content component in the logistic cost area was added; it provides product input, visualization3 d, alert, circular progress, custom text field, shared logic for fetch mutation, promise, shared logic for calculate multiple containers mutation, shared logic for get enhanced3 d visualization mutation, donut, voyage card, formatting USD, reaction to wheel, box, recompute, adjust color, f, grid bg, row face style, end face, cargo details content props, cargo details content, port opt, port hint, port options, cargo type option, the check for cylinder, name matches size, length matches size, size matches, clamped container idx, conversion to m and render.
+- A new product analysis script logic in the content area was added; it provides init, fta for, esc, formatting pct, pct class, pct val, pct str, num or null, curated matches, live matches, showing suggestions, working out HS, product key for HS, metric, buyers cell, stat strip, profile panel, where to win, playbook panel, live tag, mapping mod row, rec to pb steps, display of recommendations, display of rec bodies, mini loader, pb cert HTML, margin HTML, competitors HTML, fta HTML, display of competitors, pb body HTML, display of pb body, wtw body HTML, display of wtw body, AI bar, norm text, item detail, unique detail, norm items, norm blocks, sleep, lane reqs, macmap has stage, macmap has any, macmap request to live item, field, lane toggle HTML, pill, macmap stage HTML, poll macmap, cmp tabs inner, cmp chevron, cmp note row, items grid HTML, cmp body HTML, lane toggle active, display of cmp body, cert body, cert body HTML, display of cert body, cert panel, market analysis panel, market body HTML, display of market body, call-to-action panel, conversion to title, formatting amount, formatting quantity, formatting price, buyers panel shell, buyer card, buyer detail, display of buyers body, display of buyers, collect macmap measures, loading macmap, measures HTML, compliance baseline HTML, items, blocks, card, compliance panel shell, display of compliance, display of fallback, render, selecting country and setting active tab.
+- A new analytics server logic was added; it provides text, page key, page label, utc day, ref host, ip hash, clip, geo lookup, the check for public ip, loading geo external, finish, country name, auth, cutoff, aggregate, touch visitor, building stats, window summary, building visitor, CSV cell, ist time, esc, num, when, cc, loc, loc text, resp chip, result, loading resp, display of resp, closing resp, display of geo, display of visitors, loading visitor, load, render, syncing dl, start of local day, local date label, pct, building digest, kpi, mail transport, sending digest, ms until next digest, schedule digest, run retention and schedule retention; it offers new services for fetching healthz, creating or sending track, fetching live stats stats and fetching stats; it uses the analytics port, analytics user, analytics pass, analytics salt, geo city fallback, digest enabled, digest to, digest hour, digest tz offset min, site link, smtp host, smtp port, smtp secure, smtp user, smtp pass, digest from and retention days settings.
+- A new customs script logic in the content area was added; it provides init, setup of page, setting chrome, setup of live box, esc, debounce, flag, country dropdown, close, open, digits, classify, crit to imp, chip, request accordion, plain row, guide block, plain block, warnings HTML, guide has items, any, guide list for, collect macmap, updating reg count, macmap HTML, start loading, default title, display of tab, display of active, consumer content, loading country HS, loading macmap, analyze and flash.
+- A new port brain script logic in the content area was added; it provides init, esc, safe decode, title case, flag for, score for, tier badge, ring HTML, card HTML, note, fmt, country matches, closing country menu, choose country, display of country menu, searching link, items of, dedupe by name, product search, say, settle, vocab, edit dist le, correct product term, run text search, search, progress, updating headline, formatting indian scale and setting all.
+- A new air land model3 d component in the logistic cost area was added; it provides model3 d product, air land model3 d props, placement, uld chamfer, pack boxes, inside contour, shared logic for uld geometry and cargo.
+- A new marketplace script logic in the content area was added; it provides init, product spotlight, setting main, svg el, div, setting active, advance, play, stop, restart and setting chrome.
+- A new analytics tracker component was added; it provides endpoint, rid, stored, applying opt out param, opted out, send, field text, field label, collect query, the check for trigger, summarize result, abs link, snapshot HTML, capture result, fire, analytics tracker, scan and reaction to interact.
+- A new trade agreements script logic in the content area was added; it provides init, esc, country label, relation label, closing product menu, choose product, finding products, product tokens, working out product, status badge, members, agreement card, loading partners and search.
+- A new home script logic in the content area was added; it provides init, in poly, outline path, setting map today, setting map aaziko, animate count, tick, stagger reveal, play, count, rup, USD and upd.
+- A new demotour logic in the content area was added; it provides run demo tour, guard, wait, caption, type, pick, press, result, ok, finish and play.
+- A new livemarket logic in the content area was added; it provides esc, abs media, image link, image links, unit price, moq, money, setup of live market, select, render and search.
+- A new API logic in the content area was added; it provides getting JSON, post JSON, loading HTML and source tag.
+- A new inspection script logic in the content area was added; it provides init and render.
+- A new indiamap logic in the content area was added; it provides in poly, outline path, setup of india map, setting today and setting aaziko.
+- A new generate logic in the scripts area was added; it provides decode entities, extract title, extract description, extract head styles, split body and rewrite links.
+- A new automated test set for live response capture was added; it provides sleep, fill, click, submit, pick, sel opt, drive, run on collector, reading database and purge.
+- A new order assurance script logic in the content area was added; it provides init, setting chrome, display of assure, stop and play.
+- A new enhance navigation component was added; it provides enhance navigation, norm, setting open and reaction to change.
+- A new logistics script logic in the content area was added; it provides init.
+- A new logistics live component in the logistic cost area was added; it provides logistics live.
+- A new animate demo results component was added; it provides animate demo results, count up, tick and reveal.
+- A new enhance demo fields component was added; it provides enhance demo fields, the check for field, the check for value, flash and reaction to edit.
+- A new finance script logic in the content area was added; it provides init, fmt and calc.
+- A new home final script logic in the content area was added; it provides init, count, rup, USD and go.
+- A new seed sample logic in the analytics server area was added; it provides utc day.
+- A new static HTML page logic was added; it provides static HTML page.
+- A new partnership script logic in the content area was added; it provides init, formatting live value, simulate live data and poll live data.
+- A new app logic was added; it provides root layout.
+- The external library @react-three/drei was added (version ^9.122.0).
+- The external library @react-three/fiber was added (version ^8.18.0).
+- The external library html2canvas was added (version ^1.4.1).
+- The external library next was added (version 14.2.35).
+- The external library react was added (version 18.3.1).
+- The external library react-dom was added (version 18.3.1).
+- The external library three was added (version ^0.169.0).
+- The development tool @types/node was added (version ^25.9.3).
+- The development tool @types/react was added (version ^19.2.17).
+- The development tool @types/react-dom was added (version ^19.2.3).
+- The development tool autoprefixer was added (version ^10.5.0).
+- The development tool postcss was added (version ^8.5.15).
+- The development tool tailwindcss was added (version ^3.4.19).
+- The development tool typescript was added (version ^6.0.3).
+- The dev command of the project was added.
+- The build command of the project was added.
+- The start command of the project was added.
+- The lint command of the project was added.
+- A new next configuration was added; it uses the aaziko base path setting.
+- A new app logic was added; it provides page.
+- A new home classic logic was added; it provides page.
+- The external library better-sqlite3 was added (version ^11.8.1).
+- The external library express was added (version ^4.21.2).
+- The external library geoip-lite was added (version ^1.4.10).
+- The external library nodemailer was added (version ^6.9.16).
+- The start command of the project was added.
+- A new vision script logic in the content area was added; it provides init.
+- A new customs logic was added; it provides page.
+- A new logistics logic was added; it provides page.
+- A new marketplace logic was added; it provides page.
+- A new order assurance logic was added; it provides page.
+- A new port brain logic was added; it provides page.
+- A new tailwind configuration was added.
+- A new finance logic was added; it provides page.
+- A new inspection logic was added; it provides page.
+- A new partnership logic was added; it provides page.
+- A new product analysis logic was added; it provides page.
+- A new trade agreements logic was added; it provides page.
+- A new vision logic was added; it provides page.
+- A new postcss configuration was added.
+- A new next env d logic was added.
+- A new world path logic in the analytics server area was added.
+- A new hswords logic in the content area was added.
+- 9 styling files were added.
+- 2 dependency lock files were added in the analytics server area.
+- 13 page template files were added in the content area.
+- 2 script files were added in the analytics server area and the scripts area.
+- 2 written documentation files were added in the analytics server area.
+- 2 settings and data files were added.
+- 1 build and deployment setting file was added in the analytics server area.
+- 3 other files were added in the analytics server area.
+- 1 image file was added in the public area.
+
+### Impact
+
+- A new service for fetching healthz is now available.
+- A new service for creating or sending track is now available.
+- A new service for fetching live stats stats is now available.
+- A new service for fetching stats is now available.
+- Before deploying, the analytics port setting must be configured on the server.
+- Before deploying, the analytics user setting must be configured on the server.
+- Before deploying, the analytics pass setting must be configured on the server.
+- Before deploying, the analytics salt setting must be configured on the server.
+- Before deploying, the geo city fallback setting must be configured on the server.
+- Before deploying, the digest enabled setting must be configured on the server.
+- Before deploying, the digest to setting must be configured on the server.
+- Before deploying, the digest hour setting must be configured on the server.
+- Before deploying, the digest tz offset min setting must be configured on the server.
+- Before deploying, the site link setting must be configured on the server.
+- Before deploying, the smtp host setting must be configured on the server.
+- Before deploying, the smtp port setting must be configured on the server.
+- Before deploying, the smtp secure setting must be configured on the server.
+- Before deploying, the smtp user setting must be configured on the server.
+- Before deploying, the smtp pass setting must be configured on the server.
+- Before deploying, the digest from setting must be configured on the server.
+- Before deploying, the retention days setting must be configured on the server.
+- Before deploying, the aaziko base path setting must be configured on the server.
+- External libraries changed, so they must be installed again and the application rebuilt before deploying.
+- Build or deployment settings changed, so the build and the deployment should be checked.
+- 1 automated test file was added or changed, so the tests should be run.
 
 ---
